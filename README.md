@@ -1,6 +1,6 @@
 # yuHacks(2023) front-end
 
-The front-end project is created using Next.js 13 with Tailwind CSS integrated. We will employ atomic design when it comes to coding componenets. Routing is handled by Next's [built-in router](https://nextjs.org/docs/app/building-your-application/routing); for implementing transitions and animations we use [Framer Motion](https://www.framer.com/motion); [Headless UI](https://headlessui.com/) is included as a package for the convenience of making some frequently used UI patterns not provided by default; if there are confusion on making certain components (especially for the dashboard), refers to [shadcn/ui](https://ui.shadcn.com/docs) and copy the royalty-free code from there.
+The front-end project is created using Next.js 13 with Tailwind CSS integrated. We will employ atomic design when it comes to coding components. Routing is handled by Next's [built-in router](https://nextjs.org/docs/app/building-your-application/routing); for implementing transitions and animations we use [Framer Motion](https://www.framer.com/motion); [Headless UI](https://headlessui.com/) is included as a package for the convenience of making some frequently used UI patterns not provided by default; if there are confusion on making certain components (especially for the dashboard), refers to [shadcn/ui](https://ui.shadcn.com/docs) and copy the royalty-free code from there.
 
 ## Getting Started
 
