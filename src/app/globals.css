@@ -8,7 +8,6 @@
   --background-hex: #F5F3F3;
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
     /* --foreground-rgb: 255, 255, 255;
