@@ -1,5 +1,3 @@
-import Socials from "@/components/common/Socials.component";
-
 export default function Home() {
   
   return (
