@@ -16,7 +16,7 @@ const Button: FC = () => {
       </button>
       <br /><br />
       <button className={`text-white text-base px-12 py-2 absolute bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md rounded-2xl ${arvo.className}`}>
-        Hello
+        Sponsor Us
       </button>
     </div>
   )
