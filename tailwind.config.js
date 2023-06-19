@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         Arvo: ["Arvo", "serif"],
+        ndot47: ['var(--font-ndot-47)'],
       },
     },
   },
