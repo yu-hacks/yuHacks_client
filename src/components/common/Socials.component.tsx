@@ -4,7 +4,7 @@ import { BsTwitter } from 'react-icons/bs'
 import { SiTiktok } from 'react-icons/si'
 const Socials = () => {
     return (
-        <div>
+        <div className='flex justify-center items-center'>
             <ul className="list-none w-44 flex justify-between">
                 <li><a href="/"><AiFillLinkedin className="text-slate-400 w-8 h-8" /></a></li>
                 <li><a href="/"><AiFillInstagram className="text-slate-400 w-8 h-8" /></a></li>

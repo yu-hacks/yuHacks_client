@@ -1,6 +1,8 @@
 import Navbar from '@/components/common/Navbar.component'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Button from '@/components/common/Button.component'
+import Socials from '@/components/common/Socials.component'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-
-        {children}</body>
+        <Button />
+        <Socials />
+        {children}
+      </body>
     </html>
   )
 }

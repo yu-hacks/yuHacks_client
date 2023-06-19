@@ -1,21 +1,12 @@
 import React, { FC } from 'react'
-import { Arvo } from 'next/font/google'
-import { NextFont } from 'next/dist/compiled/@next/font';
-
-const arvo: NextFont = Arvo({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 const Button: FC = () => {
   return (
-    <div>
-      <button className={`text-white text-base px-12 py-2 absolute bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md rounded-2xl ${arvo.className}`}>
+    <div className='flex h-[100px] gap-4 justify-center items-center space-between'>
+      <button className={`inline-block text-white text-base px-12 py-2 bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md rounded-2xl font-Arvo`}>
         Login
       </button>
-      <br /><br />
-      <button className={`text-white text-base px-12 py-2 absolute bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md rounded-2xl ${arvo.className}`}>
+      <button className={`inline-block text-white text-base px-12 py-2 bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md rounded-2xl font-Arvo`}>
         Sponsor Us
       </button>
     </div>
