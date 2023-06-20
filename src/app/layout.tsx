@@ -29,7 +29,8 @@ export default function RootLayout({
     <html lang="en" className={ndot47.variable}>
       <body>
         <Navbar />
-        <Button />
+        <Button name={"Login"}/>
+        <Button name={"Sponsor us"}/>
         <Socials />
         {children}
       </body>
