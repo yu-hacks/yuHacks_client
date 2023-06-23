@@ -2,6 +2,17 @@ import Navbar from '@/components/common/Navbar.component'
 import HackerCard from '@/components/common/HackerCard.component'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Button from '@/components/common/Button.component'
+import Socials from '@/components/common/Socials.component'
+
+import localFont from 'next/font/local'
+
+// Font files can be colocated inside of `app`
+const ndot47 = localFont({
+  src: '../public/fonts/ndot-47-inspired-by-nothing.ttf',
+  display: 'swap',
+  variable: '--font-ndot-47',
+})
 
 const inter = Inter({ subsets: ['latin'] })
 
