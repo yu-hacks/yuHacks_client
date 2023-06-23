@@ -1,6 +1,8 @@
+"use client";
 import React, { FC, useState, useEffect } from 'react';
 import avt from '@/public/images/avatar_default.png';
 import Image from 'next/image';
+import ImageWithFallback from './ImageFallback';
 import '../../styles/HackerCard.css';
 
 interface Props {
@@ -14,7 +16,7 @@ const HackerCard: FC<Props> = (props) => {
       <div className="max-w-sm rounded overflow-hidden shadow-lg card-style">
         <div className="px-6 py-4">
           <div className="rectangle"></div>
-          <Image src={avt}
+          <ImageWithFallback src={avt} fallbackSrc={avt}
             className="w-30 h-30 rounded-full mx-auto bg-white"
             alt="Picture of the author"
             width={94.047}
