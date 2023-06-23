@@ -31,7 +31,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <Navbar/>
-      <HackerCard name="John Doe"/>
         {children}</body>
     </html>
   )
