@@ -1,11 +1,12 @@
 import Navbar from '@/components/common/Navbar.component'
 import HackerCard from '@/components/common/HackerCard.component'
-import { Inter } from 'next/font/google'
-import './globals.css'
 import Button from '@/components/common/Button.component'
 import Socials from '@/components/common/Socials.component'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
 import localFont from 'next/font/local'
+import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
 
 // Font files can be colocated inside of `app`
 const ndot47 = localFont({
@@ -30,8 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <Navbar/>
-      <HackerCard />
-
+      <HackerCard name="Tom" />
         {children}</body>
     </html>
   )
