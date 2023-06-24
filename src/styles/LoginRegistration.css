@@ -60,17 +60,31 @@ label{
 .email{
     position: absolute;
     left: 9.35%;
-    right: 77.75%;
     top: 47.7%;
-    bottom: 48.61%;
 }
 
 .password{
     position: absolute;
     left: 9.35%;
-    right: 69.69%;
     top: 65.27%;
-    bottom: 31.05%;
+}
+
+.c-email{
+    position: absolute;
+    left: 9.35%;
+    top: 40.5%;
+}
+
+.c-password{
+    position: absolute;
+    left: 9.35%;
+    top: 55.5%;
+}
+
+.confirm-password{
+    position: absolute;
+    left: 9.35%;
+    top: 70.5%;
 }
 
 input{
@@ -103,6 +117,30 @@ input{
     bottom: 19.77%;
 }
 
+.c-email-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 45%;
+    /* bottom: 37.33%; */
+}
+
+.c-password-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 60%;
+    /* bottom: 19.77%; */
+}
+
+.confirm-password-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 75%;
+    /* bottom: 19.77%; */
+}
+
 .sign-up{
     height: 17px;
     width: 53px;
@@ -113,14 +151,24 @@ input{
     bottom: 8.5%;
 }
 
-Button{
+.sign-up:hover{
+    color: #C95656;
+}
+
+.main-button{
     height: 45px;
     width: 135px;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    position: absolute;
+    left: 35.16%;
+    right: 35.95%;
+    top: 29.79%;
+    bottom: 21.32%;
 
+}
+
+.main-button:hover{
+    background-color: #c46d6d;
+    color:black;
 }
 
 .cross{
