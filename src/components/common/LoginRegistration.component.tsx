@@ -1,8 +1,7 @@
 "use client"; 
 import React, { FormEvent, useState } from 'react'
 import '../../styles/LoginRegistration.css';
-import Link from 'next/link';
-// import Button from '@/components/common/Button.component'
+import Button from '@/components/common/Button.component'
 import {BsCursorFill} from 'react-icons/bs'
 import {RxCross2} from 'react-icons/rx'
 
@@ -138,14 +137,6 @@ const LoginRegistration = () => {
 
 
                 <div id='login'>
-                    {/* {email && <div id="errorMessage" className="bg-red-100 border text-xs border-red-400 text-red-700 px-2 py-1 rounded relative" role="alert">
-                        <strong className="font-bold">Error! </strong>
-                        <span id="error" className="block sm:inline"></span>
-                        <span onClick={hide} className="absolute top-0 bottom-0 right-0 px-2 py-1">
-                            <svg className="fill-current h-4 w-4 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
-                        </span>
-                    </div>} */}
-
                     <form className='m-auto' onSubmit={handleLogin} name='loginForm' action='#' method="POST">
                         <div>
                             <label className='email m-auto text text-sm' htmlFor='email'>Email{email && <span id='err1' style={{color: 'red'}}>{email}</span>}</label>
@@ -160,9 +151,8 @@ const LoginRegistration = () => {
                         </div>
 
                         <div>
-                            {/* <Button className='main-button' name={"Login"}/> type="submit" */}
                             <button onClick={signUpView} className='sign-up text-black text' type="reset">Sign Up</button>
-                            <button className='main-button' type='submit'>Login</button>
+                            <Button className='main-button' name={"Login"} type="submit"/> 
                         </div>
                     </form>
 
@@ -197,9 +187,8 @@ const LoginRegistration = () => {
                         </div>
 
                         <div>
-                            {/* <Button className='main-button' name={"Sign Up"}/> type="submit" */}
                             <button onClick={loginView} className='sign-up text-black text' type="reset">Login</button>
-                            <button className='main-button' type="submit">Sign Up</button>
+                            <Button className='main-button' name={"Sign Up"} type="submit"/> 
                         </div>
                     </form>
 
