@@ -146,9 +146,7 @@ input{
     width: 53px;
     position: absolute;
     left: 16.45%;
-    right: 66.46%;
     top: 87.82%;
-    bottom: 8.5%;
 }
 
 .sign-up:hover{
@@ -159,11 +157,8 @@ input{
     height: 45px;
     width: 135px;
     position: absolute;
-    left: 35.16%;
-    right: 35.95%;
-    top: 29.79%;
-    bottom: 21.32%;
-
+    left: 48%;
+    top: 85%;
 }
 
 .main-button:hover{
