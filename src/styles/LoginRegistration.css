@@ -149,9 +149,9 @@ input{
     top: 87.82%;
 }
 
-.sign-up:hover{
+/* .sign-up:hover{
     color: #C95656;
-}
+} */
 
 .main-button{
     height: 45px;
@@ -161,10 +161,10 @@ input{
     top: 84.55%;
 }
 
-.main-button:hover{
+/* .main-button:hover{
     background-color: #c46d6d;
     color:black;
-}
+} */
 
 .cross{
     font-size: 25px;
