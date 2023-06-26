@@ -5,6 +5,8 @@ import Button from '@/components/common/Button.component'
 import Socials from '@/components/common/Socials.component'
 
 import localFont from 'next/font/local'
+import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
+import ChallengeCard from '@/components/common/ChallengeCard.component'
 
 // Font files can be colocated inside of `app`
 const ndot47 = localFont({
@@ -27,11 +29,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={ndot47.variable}>
-      <body>
-        <Navbar />
+      <body className='flex items-center justify-center'>
+        {/* <Navbar />
         <Button name={"Login"}/>
         <Button name={"Sponsor us"}/>
-        <Socials />
+        <Socials /> */}
+        <ChallengeCard />
         {children}
       </body>
     </html>
