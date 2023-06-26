@@ -61,7 +61,7 @@ const Card: FC<Props> = ({ deg, pos, text, handleClick }) => {
         setTimeout(() => {
             setIsTransitioning(false);
             handleClick();
-        }, 500); // Adjust the duration of the transition animation here (in milliseconds)
+        }, 250); // Adjust the duration of the transition animation here (in milliseconds)
     };
 
     return (
