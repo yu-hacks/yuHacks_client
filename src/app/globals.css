@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --bg-main-accent: #C95656;
   --foreground-hex: #3D3D3D;
   --background-hex: #F5F3F3;
 }
@@ -19,3 +21,5 @@ body {
   color: var(--foreground-rgb);
   background: var(--background-hex);
 }
+
+
