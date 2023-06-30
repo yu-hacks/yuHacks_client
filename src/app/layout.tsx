@@ -7,6 +7,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 
 import localFont from 'next/font/local'
+import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
+import ChallengeCard from '@/components/common/ChallengeCard.component'
 
 // Font files can be colocated inside of `app`
 const ndot47 = localFont({
