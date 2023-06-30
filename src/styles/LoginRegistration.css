@@ -1,0 +1,176 @@
+.outer{
+    height: 460px;
+    width: 310px;
+    padding:16px;
+    /* left: 0.01%;
+    right: 0.14%;
+    top: 0.01%;
+    bottom: 0.06%; */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    align-content: center;
+}
+
+.top-icon{
+    height: 8px;
+    width: 42px;
+    border-radius: 6px;
+    position: absolute;
+    left: 43.22%;
+    right: 43.24%;
+    top: 3.53%;
+    bottom: 94.73%;
+
+}
+
+.circle{
+    height:120px;
+    width: 120px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 30.42%;
+    right: 30.76%;
+    top: 14.31%;
+    bottom: 59.58%;
+    background: #C95656;
+    border: 4px dashed #C95656;
+}
+
+.icon-flip {
+    padding: auto;
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
+
+.text{
+    font-family: 'Arvo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+label{
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.email{
+    position: absolute;
+    left: 9.35%;
+    top: 47.7%;
+}
+
+.password{
+    position: absolute;
+    left: 9.35%;
+    top: 65.27%;
+}
+
+.c-email{
+    position: absolute;
+    left: 9.35%;
+    top: 40.5%;
+}
+
+.c-password{
+    position: absolute;
+    left: 9.35%;
+    top: 55.5%;
+}
+
+.confirm-password{
+    position: absolute;
+    left: 9.35%;
+    top: 70.5%;
+}
+
+input{
+    height: 47px;
+    width: 262px;
+    font-size: 15px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)),
+    linear-gradient(0deg, #F9F9F9, #F9F9F9);
+    color: rgba(0, 0, 0, 0.13);
+    box-sizing: border-box;  
+    background: #F9F9F9;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 4px;    
+}
+
+.email-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 52.47%;
+    bottom: 37.33%;
+}
+
+.password-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 70.04%;
+    bottom: 19.77%;
+}
+
+.c-email-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 45%;
+    /* bottom: 37.33%; */
+}
+
+.c-password-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 60%;
+    /* bottom: 19.77%; */
+}
+
+.confirm-password-input{
+    position: absolute;
+    left: 7.74%;
+    right: 7.77%;
+    top: 75%;
+    /* bottom: 19.77%; */
+}
+
+.sign-up{
+    height: 17px;
+    width: 53px;
+    position: absolute;
+    left: 16.45%;
+    top: 87.82%;
+}
+
+/* .sign-up:hover{
+    color: #C95656;
+} */
+
+.main-button{
+    height: 45px;
+    width: 135px;
+    position: absolute;
+    left: 48%;
+    top: 84.55%;
+}
+
+/* .main-button:hover{
+    background-color: #c46d6d;
+    color:black;
+} */
+
+.cross{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.45);
+    left: 20.83%;
+    right: 20.83%;
+    top: 20.83%;
+    bottom: 20.83%;
+}
