@@ -1,8 +1,10 @@
 import Navbar from '@/components/common/Navbar.component'
-import './globals.css'
-import { Inter } from 'next/font/google'
+import HackerCard from '@/components/common/HackerCard.component'
 import Button from '@/components/common/Button.component'
 import Socials from '@/components/common/Socials.component'
+import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
 import localFont from 'next/font/local'
 import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
@@ -28,15 +30,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={ndot47.variable}>
-      <body className='flex items-center justify-center'>
-        {/* <Navbar />
-        <Button name={"Login"}/>
-        <Button name={"Sponsor us"}/>
-        <Socials /> */}
-        <ChallengeCard />
-        {children}
-      </body>
+    <html lang="en">
+      <body className={inter.className}>
+      <Navbar/>
+        {children}</body>
     </html>
   )
 }
