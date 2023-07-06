@@ -9,6 +9,7 @@ import './globals.css'
 import localFont from 'next/font/local'
 // import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
 import ChallengeCard from '@/components/common/ChallengeCard.component'
+import { HackerForm } from '@/components/common/HackerForm.component'
 // Font files can be colocated inside of `app`
 const ndot47 = localFont({
   src: '../public/fonts/ndot-47-inspired-by-nothing.ttf',
@@ -32,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} flex items-center justify-center`}>
       {/* <Navbar/> */}
-      <ChallengeCard/>
+      <HackerForm/>
         {children}</body>
     </html>
   )
