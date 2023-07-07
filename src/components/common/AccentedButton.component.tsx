@@ -13,7 +13,7 @@ type Props = {
   fullWidth: boolean;
 };
 
-const PrimaryButton: FC<Props> = ({name, buttonType, primary, fullWidth}) => {
+const AccentedButton: FC<Props> = ({name, buttonType, primary, fullWidth}) => {
   const normalPrimary = `flex px-12 py-2 transition-all text-white text-base bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md hover:border-4 focus:border-4 focus:shadow-lg rounded-xl font-HindMadurai font-semibold`;
   const normalSecondary =`flex px-12 py-2 transition-all text-black text-base hover:shadow-md hover:rounded-xl focus:shadow-lg focus:rounded-xl font-HindMadurai font-semibold`;
   const fullPrimary = 'w-full w-min-[300px] flex justify-center py-2 transition-all text-white text-base bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md hover:border-4 focus:border-4 focus:shadow-lg rounded-xl font-HindMadurai font-semibold';
@@ -101,4 +101,4 @@ const PrimaryButton: FC<Props> = ({name, buttonType, primary, fullWidth}) => {
 };
 
 
-export default PrimaryButton;
+export default AccentedButton;
