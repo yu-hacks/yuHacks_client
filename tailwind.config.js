@@ -16,6 +16,7 @@ module.exports = {
         Inconsolata: ['Inconsolata', 'serif'],
         Arvo: ['Arvo', 'serif'],
         ndot47: ['var(--font-ndot-47)'],
+        HindMadurai: ['var(--font-hind-madurai)'],
       },
       width: {
         910: '910px',

@@ -33,10 +33,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex items-center justify-center`}>
-      {/* <Navbar/> */}
-      <ChallengeCard/>
-        {children}</body>
+      <body className={`${inter.className}`}>
+        {/* <Navbar/> */}
+        <ComingSoonPage2 />
+        </body>
     </html>
   )
 }
