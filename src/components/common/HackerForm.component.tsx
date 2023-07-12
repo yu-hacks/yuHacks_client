@@ -1,13 +1,13 @@
 "use client"
 
-import React, { FC, useRef, useState } from 'react'
+import React, { FC, useState } from 'react'
 import Button from './Button.component'
-import { MdFileDownload } from 'react-icons/md'
+import DownloadIcon from '@mui/icons-material/Download';
 
-export const HackerForm: FC = () => {
-    const onUpload = (file: File) => {
-        console.log(file)
-    }
+interface HackerFormProps {
+    isHacker: boolean;
+}
+export const HackerForm: FC<HackerFormProps> = ({isHacker}) => {
     return (
         <div className='h-screen w-[80%] mx-auto bg-[#F6F6F6]'>
             <form action="#" className='pt-24 pb-10'>
@@ -48,9 +48,8 @@ export const HackerForm: FC = () => {
                             <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="linkedin" placeholder='www.linkedin.com/...' />
                         </label>
                     </fieldset>
-                    <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Resume (in PDF Format)
-                        <FileDragDrop onUpload={onUpload} />
-                    </label>
+                    <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Resume (in PDF Format)</label>
+                        <FileDragDrop />
                     <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Say something about yourself in 500 words or less
                         <textarea className={`w-full p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]`} rows={7} name="story" placeholder='Now, tell us your story...'></textarea>
                     </label>
@@ -67,20 +66,20 @@ export const HackerForm: FC = () => {
                         <input className='w-[49%] block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="size" placeholder='XS/S/M/L/XL' />
                     </label>
                 </fieldset>
-                <fieldset className={`flex justify-end gap-1 mt-14`}>
-                    <Button bgColor='bg-transparent' color='text-black' type="reset" name="Clear" />
-                    <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
+                <fieldset className={`flex justify-between mt-14`}>
+                    {!isHacker && <Button bgColor='bg-[#DE4F30]' color='text-white' type="reset" name="Reject"/> }
+                    <div className={`flex justify-end gap-3 ${isHacker && 'w-full'}`}>
+                        <Button bgColor='bg-transparent' color='text-black' type="reset" name="Clear" />
+                        <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
+                    </div>
                 </fieldset>
             </form>
         </div>
     )
 }
 
-interface FileDragDropProps {
-    onUpload: (file: File) => void,
-}
 
-const FileDragDrop: FC<FileDragDropProps> = ({ onUpload }) => {
+const FileDragDrop: FC = () => {
 
     const [uploadedFile, setUploadedFile] = useState<File>();
     const [isDragging, setIsDragging] = useState(false);
@@ -111,8 +110,24 @@ const FileDragDrop: FC<FileDragDropProps> = ({ onUpload }) => {
         setIsDragging(false);
 
         const newFile = e.dataTransfer.files[0];
-        setUploadedFile(newFile);
-        onUpload(newFile);
+        const fileExtension = newFile.name.split('.').pop()?.toLowerCase();
+
+        if (fileExtension === 'pdf') {
+            setUploadedFile(newFile);
+        } else {
+            alert('Invalid file format. Only PDF files are accepted.');
+        }
+    };
+
+    const handleButtonClick = () => {
+        if (uploadedFile) {
+            const downloadUrl = URL.createObjectURL(uploadedFile);
+            const a = document.createElement('a');
+            a.href = downloadUrl;
+            a.download = uploadedFile.name;
+            a.click();
+            URL.revokeObjectURL(downloadUrl);
+        }
     };
 
     return (
@@ -121,7 +136,7 @@ const FileDragDrop: FC<FileDragDropProps> = ({ onUpload }) => {
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             className={`w-auto h-24 flex items-center justify-center flex-col flex-nowrap text-base text-[#555555] border-2 border-[rgb(0,0,0)] border-opacity-[0.35] rounded-lg ${isDragging ? '' : 'border-dashed'}`}
-        > {uploadedFile ? <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" icon={() => <MdFileDownload/>} name={`${uploadedFile.name}`} /> : ""}
+        > {uploadedFile ? <Button onClick={handleButtonClick} bgColor='bg-[#4F4F4F]' color='text-white' Icon={DownloadIcon} name={`${uploadedFile.name}`} /> : ""}
         </div>
     )
 }

@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-[#F6F6F6] flex items-center justify-center`}>
       {/* <Navbar/> */}
-      <HackerForm/>
+      <HackerForm isHacker={false}/> {/* flexible form, change the isHacker prop to switch between hacker and organizer*/}
         {children}</body>
     </html>
   )
