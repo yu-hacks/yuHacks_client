@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex items-center justify-center`}>
+      <body className={`${inter.className} bg-[#F6F6F6] flex items-center justify-center`}>
       {/* <Navbar/> */}
       <HackerForm/>
         {children}</body>
