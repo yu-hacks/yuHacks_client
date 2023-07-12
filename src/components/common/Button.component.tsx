@@ -1,15 +1,22 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
+import { IconType } from 'react-icons';
+
+type Icon = (props: IconType) => JSX.Element;
 
 interface Props {
   name: string;
   type: string;
+  bgColor: string;
+  color: string;
+  Ic?: Icon;
 }
-const Button: FC<Props> = (props) => {
+const Button: FC<Props> = ({name, type, bgColor, color, Ic}) => {
   return (
     <div>
-      {(props.type === 'submit' || props.type === 'reset') ?
-        <input type={props.type} className={`hover:opacity-80 transition-all inline-block text-white text-base px-12 py-2 bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md rounded-2xl font-Arvo`} value={props.name} /> : <button className={`hover:opacity-80 transition-all inline-block text-white text-base px-12 py-2 bg-[var(--bg-main-accent)] border-2 border-solid border-black/[.13] shadow-md rounded-2xl font-Arvo`}>
-          {props.name}
+      {(type === 'submit' || type === 'reset') ?
+        <input type={type} className={`hover:opacity-80 transition-all inline-block ${color} text-base px-12 py-2 ${bgColor} border-2 border-solid border-black/[.13] shadow-md rounded-2xl font-Arvo`} value={`${Icon ? Icon : ""} ${name}`} /> : <button className={`hover:opacity-80 transition-all inline-block ${color} text-base px-12 py-2 ${bgColor} border-2 border-solid border-black/[.13] shadow-md rounded-2xl font-Arvo`}>
+          <div><Ic /></div>
+          {name}
         </button>}
     </div>
   )

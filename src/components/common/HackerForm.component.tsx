@@ -2,16 +2,15 @@
 
 import React, { FC, useRef, useState } from 'react'
 import Button from './Button.component'
+import { MdFileDownload } from 'react-icons/md'
 
 export const HackerForm: FC = () => {
-    const onUpload = (files: File[]) => {
-        const res: string[] = []
-        files.forEach((file, index) => res[index] = file.name)
-        console.log(res)
+    const onUpload = (file: File) => {
+        console.log(file)
     }
     return (
-        <div className='h-screen w-[85%] mx-auto bg-[#F6F6F6]'>
-            <form action="#" className='pt-24'>
+        <div className='h-screen w-[80%] mx-auto bg-[#F6F6F6]'>
+            <form action="#" className='pt-24 pb-10'>
                 <h1 className={`font-HindMadurai text-[32px] font-bold text-black`}>Hacker Application</h1>
                 <hr className='h-[1.5px] bg-black/20' />
                 <fieldset className={`mt-14`}>
@@ -19,56 +18,58 @@ export const HackerForm: FC = () => {
                     <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Email *
                         <input className='w-full h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="email" name="email" placeholder='example@gmail.com' required />
                     </label>
-                    <fieldset className={`mt-3 flex justify-between flex-nowrap gap-9`}>
+                    <fieldset className={`mt-3 flex justify-between flex-nowrap gap-9 items-end`}>
                         <label className={`flex-grow text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>First Name *
-                            <input className='w-full block h-12 p-6 font-Arvo text-sm text-black text-opacity-[0.13] bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="first-name" required />
+                            <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="first-name" placeholder='John' required />
                         </label>
                         <label className={`flex-grow block text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Last Name *
-                            <input className='w-full block h-12 p-6 font-Arvo text-sm text-black text-opacity-[0.13] bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="last-name" required />
+                            <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="last-name" placeholder='Doe' required />
                         </label>
                     </fieldset>
-                    <fieldset className={`mt-3 flex justify-between flex-nowrap gap-9`}>
-                        <label className={`flex-grow text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>First Name *
-                            <input className='w-full block h-12 p-6 font-Arvo text-sm text-black text-opacity-[0.13] bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="first-name" required />
+                    <fieldset className={`mt-3 flex justify-between flex-nowrap gap-9 items-end`}>
+                        <label className={`flex-grow text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>School *
+                            <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="school" placeholder='York University' required />
                         </label>
-                        <label className={`flex-grow block text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Last Name *
-                            <input className='w-full block h-12 p-6 font-Arvo text-sm text-black text-opacity-[0.13] bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="last-name" required />
+                        <label className={`flex-grow block text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Year *
+                            <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="year" placeholder='3rd Year' required />
                         </label>
                     </fieldset>
                 </fieldset>
                 <fieldset className={`mt-14`}>
                     <legend className={`text-[#C3C3C3] font-HindMadurai text-base font-semibold`}>Portfolio</legend>
                     <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Website
-                        <input type="text" name="website" />
+                        <input className={`w-full h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]`} type="text" name="website" placeholder='www.mywebsite.com' />
                     </label>
-                    <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Your Repository (Github, Gitlab, etc.)
-                        <input type="text" name="repo" />
-                    </label>
-                    <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>LinkedIn Page
-                        <input type="text" name="linkedin" />
-                    </label>
-                    <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Resume (in PDF Format)
+                    <fieldset className={`mt-3 flex justify-between flex-nowrap gap-9 items-end`}>
+                        <label className={`flex-grow text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Your Repository (Github, Gitlab, etc.)
+                            <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="repo" placeholder='www.mygit.com/...' />
+                        </label>
+                        <label className={`flex-grow block text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Linkedin Page
+                            <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="linkedin" placeholder='www.linkedin.com/...' />
+                        </label>
+                    </fieldset>
+                    <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Resume (in PDF Format)
                         <FileDragDrop onUpload={onUpload} />
                     </label>
-                    <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Say something about yourself in 500 words or less
-                        <input type="textarea" name="story" placeholder='Now, tell us your story...' />
+                    <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Say something about yourself in 500 words or less
+                        <textarea className={`w-full p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]`} rows={7} name="story" placeholder='Now, tell us your story...'></textarea>
                     </label>
                 </fieldset>
                 <fieldset className={`mt-14`}>
                     <legend className={`text-[#C3C3C3] font-HindMadurai text-base font-semibold`}>Special Requirements</legend>
-                    <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Do you have any allergy or need medical assistance?
-                        <input type="email" name="email" required />
+                    <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Do you have any allergy or need medical assistance?
+                        <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="email" name="allergy" placeholder='We’re allergic to bad vibes :)' />
                     </label>
-                    <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Do you have any special dietary needs?
-                        <input type="text" name="first-name" required />
+                    <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Do you have any special dietary needs?
+                        <input className='w-full block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="diet" placeholder='We’re allergic to bad vibes :)' />
                     </label>
-                    <label className={`text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Clothing Size
-                        <input type="text" name="last-name" required />
+                    <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Clothing Size
+                        <input className='w-[49%] block h-12 p-6 font-Arvo text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="size" placeholder='XS/S/M/L/XL' />
                     </label>
                 </fieldset>
-                <fieldset className={`mt-14`}>
-                    <Button type="reset" name="Clear" />
-                    <Button type="submit" name="Submit" />
+                <fieldset className={`flex justify-end gap-1 mt-14`}>
+                    <Button bgColor='bg-transparent' color='text-black' type="reset" name="Clear" />
+                    <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
                 </fieldset>
             </form>
         </div>
@@ -76,12 +77,12 @@ export const HackerForm: FC = () => {
 }
 
 interface FileDragDropProps {
-    onUpload: (files: File[]) => void,
+    onUpload: (file: File) => void,
 }
 
 const FileDragDrop: FC<FileDragDropProps> = ({ onUpload }) => {
 
-    const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+    const [uploadedFile, setUploadedFile] = useState<File>();
     const [isDragging, setIsDragging] = useState(false);
 
     const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
@@ -109,9 +110,9 @@ const FileDragDrop: FC<FileDragDropProps> = ({ onUpload }) => {
         e.stopPropagation();
         setIsDragging(false);
 
-        const newFiles = Array.from(e.dataTransfer.files);
-        setUploadedFiles([...uploadedFiles, ...newFiles]);
-        onUpload([...uploadedFiles, ...newFiles]);
+        const newFile = e.dataTransfer.files[0];
+        setUploadedFile(newFile);
+        onUpload(newFile);
     };
 
     return (
@@ -119,20 +120,8 @@ const FileDragDrop: FC<FileDragDropProps> = ({ onUpload }) => {
             onDrop={handleDrop}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
-            className={`w-auto h-52 p-12 flex items-center justify-center flex-col flex-nowrap text-base text-[#555555] border-2 border-[#c3c3c3] ${isDragging ? '' : 'border-dashed'} rounded-3xl`}
-        >
-            Hey, drop me some files
-            {isDragging ? <span
-                role='img'
-                aria-label='emoji'
-                className={`text-6xl mt-5`}>
-                &#128522;
-            </span> : <span
-                role='img'
-                aria-label='emoji'
-                className={`text-6xl mt-5`}
-            >  &#128526;
-            </span>}
+            className={`w-auto h-24 flex items-center justify-center flex-col flex-nowrap text-base text-[#555555] border-2 border-[rgb(0,0,0)] border-opacity-[0.35] rounded-lg ${isDragging ? '' : 'border-dashed'}`}
+        > {uploadedFile ? <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" icon={() => <MdFileDownload/>} name={`${uploadedFile.name}`} /> : ""}
         </div>
     )
 }
