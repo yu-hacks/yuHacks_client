@@ -13,11 +13,27 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        Inconsolata: ["Inconsolata", "serif"],
-        Arvo: ["Arvo", "serif"],
+        Inconsolata: ['Inconsolata', 'serif'],
+        Arvo: ['Arvo', 'serif'],
         ndot47: ['var(--font-ndot-47)'],
+      },
+      width: {
+        910: '910px',
+      },
+      height: {
+        469: '469px',
+      },
+      screens: {
+        tablet: '640px',
+        // => @media (min-width: 640px) { ... }
+
+        laptop: '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        desktop: '1280px',
+        // => @media (min-width: 1280px) { ... }
       },
     },
   },
   plugins: [],
-}
+};
