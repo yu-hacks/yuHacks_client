@@ -10,8 +10,7 @@ import localFont from 'next/font/local'
 import ChallengeCard from '@/components/common/ChallengeCard.component'
 import LoginRegistration from '@/components/common/LoginRegistration.component'
 import UserBadge from '@/components/common/UserBadge.component'
-import ComingSoonPage2 from '@/pages/ComingSoonPage2'
-
+import ComingSoonPage from '@/pages/ComingSoonPage'
 // Font files can be colocated inside of `app`
 const ndot47 = localFont({
   src: '../public/fonts/ndot-47-inspired-by-nothing.ttf',
@@ -35,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         {/* <Navbar/> */}
-        <ComingSoonPage2 />
+        <ComingSoonPage />
         </body>
     </html>
   )
