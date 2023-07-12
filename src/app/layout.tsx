@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 
 import localFont from 'next/font/local'
-import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
+// import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
 import ChallengeCard from '@/components/common/ChallengeCard.component'
 import LoginRegistration from '@/components/common/LoginRegistration.component'
 import UserBadge from '@/components/common/UserBadge.component'
@@ -33,8 +33,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
+      <body className={`${inter.className} flex items-center justify-center`}>
+      {/* <Navbar/> */}
+      <ChallengeCard/>
         {children}</body>
     </html>
   )
