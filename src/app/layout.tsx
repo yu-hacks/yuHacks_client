@@ -10,8 +10,10 @@ import localFont from 'next/font/local'
 // import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
 import ChallengeCard from '@/components/common/ChallengeCard.component'
 import { HackerForm } from '@/components/common/HackerForm.component'
+import AboutPage2 from '@/pages/AboutPage2'
 // Font files can be colocated inside of `app`
-const ndot47 = localFont({
+
+export const ndot47 = localFont({
   src: '../public/fonts/ndot-47-inspired-by-nothing.ttf',
   display: 'swap',
   variable: '--font-ndot-47',
@@ -31,10 +33,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#F6F6F6] flex items-center justify-center`}>
-      {/* <Navbar/> */}
-      <HackerForm isHacker={false}/> {/* flexible form, change the isHacker prop to switch between hacker and organizer*/}
-        {children}</body>
+      <body className={`${inter.className} bg-[#F6F6F6]`}>
+        {/* <Navbar/> */}
+        {/* <HackerForm isHacker={false} />  */}
+        <AboutPage2 />
+        {/*children*/}</body>
     </html>
   )
 }

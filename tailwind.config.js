@@ -15,7 +15,7 @@ module.exports = {
       fontFamily: {
         Inconsolata: ["Inconsolata", "serif"],
         Arvo: ["Arvo", "serif"],
-        ndot47: ['var(--font-ndot-47)'],
+        ndot47: ['var(--font-ndot-47)', 'serif'],
         HindMadurai: ["Hind Madurai", "serif"],
       },
     },
