@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 @import url('https://fonts.googleapis.com/css?family=Hind Madurai');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Hind Madurai';
+  src: local('HindMadurai'), url(../public/fonts/Hind_Madurai/HindMadurai-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'ndot47';
+  src: local('ndot47'), url(../public/fonts/ndot-47-inspired-by-nothing.ttf) format('truetype');
+}
 
 :root {
   --bg-main-accent: #C95656;
