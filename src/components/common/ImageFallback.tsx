@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image, { ImageProps, StaticImageData } from 'next/image';
 
 interface ImageWithFallbackProps extends ImageProps {
-    fallbackSrc: StaticImageData
+  fallbackSrc: StaticImageData
 }
 
 const ImageWithFallback = (props: ImageWithFallbackProps) => {
