@@ -41,7 +41,6 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         {/* <ComingSoonPage /> */}
         {/* <LandingPage/> */}
-        {children}
 
         {/* <Navbar/> */}
         {/* <ComingSoonPage /> */}
