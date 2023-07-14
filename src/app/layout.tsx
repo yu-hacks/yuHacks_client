@@ -11,6 +11,10 @@ import ChallengeCard from '@/components/common/ChallengeCard.component'
 import LoginRegistration from '@/components/common/LoginRegistration.component'
 import UserBadge from '@/components/common/UserBadge.component'
 import ComingSoonPage from '@/pages/ComingSoonPage'
+import InputField from '@/components/common/InputField.component'
+import LandingPage from '@/pages/LandingPage/page'
+import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
+
 // Font files can be colocated inside of `app`
 const ndot47 = localFont({
   src: '../public/fonts/ndot-47-inspired-by-nothing.ttf',
@@ -33,8 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        {/* <Navbar/> */}
-        <ComingSoonPage />
+        {/* <ComingSoonPage /> */}
+        {/* <LandingPage/> */}
+        {children}
         </body>
     </html>
   )
