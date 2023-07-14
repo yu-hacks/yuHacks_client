@@ -19,7 +19,7 @@ import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.compone
 
 // Font files can be colocated inside of `app`
 
-export const ndot47 = localFont({
+const ndot47 = localFont({
   src: '../public/fonts/ndot-47-inspired-by-nothing.ttf',
   display: 'swap',
   variable: '--font-ndot-47',
