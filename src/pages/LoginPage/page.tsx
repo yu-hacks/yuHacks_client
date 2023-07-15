@@ -14,6 +14,7 @@ import {
     useMutation,
     gql
 } from "@apollo/client";
+import AccentedButton from '@/components/common/AccentedButton.component';
 
 const client = new ApolloClient({
     cache: new InMemoryCache(),
@@ -141,16 +142,16 @@ export default function LoginPage() {
                 </div>
 
 
-                <div className="MainPage flex flex-col sm:flex-col md:flex-row lg: flex-row w-screen h-screen   " >
+                <div className="MainPage flex flex-col max-w-[950px] max-h[505px] sm:flex-col md:flex-row lg:flex-row justify-center align-center mx-auto my-4 sm:my-4 md:my-16 lg:my-16" >
 
-                    <div className="HackerCard w-full sm:w-full lg:w-1/2 md:w-1/2 flex mb-4 sm:mb-4 md:mb-32 lg:mb-32 justify-center items-center ">
+                    <div className="HackerCard w-full  sm:w-full lg:w-1/2 md:w-1/2 flex mb-4 sm:mb-4 md:mb-32 lg:mb-32 justify-center items-center ">
 
                         <Image src={HackerCardLogin} alt="My Image" width={427} height={475} />
                         {/* <Image src={HackerCardLogin} alt="My Image" width={200} height={200} /> */}
 
                     </div>
 
-                    <div className={`LoginSection w-full sm:w-full lg:w-1/2 md:w-1/2 flex justify-center items-center ${loginMode ? 'mb-0' : 'mb-64'}`}>
+                    <div className={`LoginSection w-full  sm:w-full lg:w-1/2 md:w-1/2 flex justify-center items-center ${loginMode ? 'mb-0' : 'mb-48'}`}>
 
 
                         <div className="Login   w-[406px] h-[490px]">
@@ -202,7 +203,8 @@ export default function LoginPage() {
                                     <div className="Line16 grow shrink basis-0 h-[0px] border border-neutral-800 border-opacity-10"></div>
                                 </div>
 
-                                <Button name={'Login with Google'} id={'Google'} />
+                                <Button name={'Login with Google'} id={'Google'} colour='var(--light, #FBFBFB)' fontcolour='black' />
+                                
                             </form>
 
                         </div>
