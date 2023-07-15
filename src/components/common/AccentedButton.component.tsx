@@ -5,7 +5,7 @@ import {FaChevronRight} from 'react-icons/fa'
 
 // example
 {/* <AccentedButton name='sec. Direction Button' buttonType='action' primary={true} fullWidth={true} onClick={}/> */}
-/
+
 type Props = {
   name: string;
   buttonType: string;
