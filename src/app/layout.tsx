@@ -11,6 +11,7 @@ import ChallengeCard from '@/components/common/ChallengeCard.component'
 import LoginRegistration from '@/components/common/LoginRegistration.component'
 import UserBadge from '@/components/common/UserBadge.component'
 import ComingSoonPage from '@/pages/ComingSoonPage'
+import SideBar from '@/components/common/SideBar.component'
 // Font files can be colocated inside of `app`
 const ndot47 = localFont({
   src: '../public/fonts/ndot-47-inspired-by-nothing.ttf',
@@ -34,7 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         {/* <Navbar/> */}
-        <ComingSoonPage />
+        <UserBadge roles="sponsor" />
         </body>
     </html>
   )
