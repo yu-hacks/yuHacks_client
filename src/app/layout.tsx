@@ -12,6 +12,7 @@ import LoginRegistration from '@/components/common/LoginRegistration.component'
 import UserBadge from '@/components/common/UserBadge.component'
 import ComingSoonPage from '@/pages/ComingSoonPage'
 
+
 import InputField from '@/components/common/InputField.component'
 import LandingPage from '@/pages/LandingPage/page'
 import YorkUHacksWatermark from '@/components/common/YorkUHacksWatermark.component'
@@ -43,10 +44,6 @@ export default function RootLayout({
         {/* <LandingPage/> */}
 
         {/* <Navbar/> */}
-        {/* <ComingSoonPage /> */}
-    
-        <AboutPage1/>
-        {/* {children} */}
         </body>
     </html>
   )
