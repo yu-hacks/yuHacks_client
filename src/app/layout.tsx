@@ -43,6 +43,7 @@ export default function RootLayout({
         {/* <Navbar/> */}
         {/* <HackerForm isHacker={false} />  */}
         <AboutPage2 />
+        {/* <ComingSoonPage /> */}
         {/*children*/}
         </body>
     </html>

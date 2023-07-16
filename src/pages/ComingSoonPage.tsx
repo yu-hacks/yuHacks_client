@@ -36,7 +36,7 @@ const ComingSoonPage: FC = () => {
 
   return (
     <div style={mainStyle}>
-      <div className='w-full max-w-screen-xl mx-auto p-6 flex flex-row items-center justify-between'>
+      <div className='h-24 w-full max-w-screen-xl mx-auto p-6 flex flex-row items-center justify-between'>
         <div className='flex items-center'>
           <div className='mr-[7px]'>
             <Image src={navicon} alt="navicon" className='w-[40px] h-[40px]' />
