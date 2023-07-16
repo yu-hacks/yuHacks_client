@@ -50,7 +50,7 @@ const AboutPage2 = () => {
             backgroundPosition: 'center',
           }}
           className={`flex items-center justify-center lg:h-full lg:w-[45%] h-[50%] w-full`}>
-          <div className='relative sm:h-1/2 h-2/3 w-[50%] sm:w-[44%]'>
+          <div className='relative 2xl:w-[40%] 2xl:h-1/2 xl:h-[60%] lg:w-[60%] md:h-3/4 md:w-[40%] sm:h-1/2 h-2/3 w-[50%] sm:w-[44%]'>
             <ChallengeCard />
           </div>
         </div>
