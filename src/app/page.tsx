@@ -1,14 +1,13 @@
-// import HackerCard from "@/components/common/HackerCard.component";
-import InputField from "@/components/common/InputField.component";
-import LandingPage from "@/pages/LandingPage/page";
-import LoginPage from "@/pages/LoginPage/page";
+import AboutSection from "@/components/sections/AboutSection";
+import HeroSection from "@/components/sections/HeroSection";
 
 export default function Home() {
   
   return (
     <main className="flex  min-h-screen flex-col px-auto">
-         <LoginPage/>
-         {/* <LandingPage/> */}
+      {/* <div className="bg-red-500">Hello world</div> */}
+      <HeroSection />
+      <AboutSection />
     </main>
   )
 }
