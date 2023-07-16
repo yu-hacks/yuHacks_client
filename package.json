@@ -9,8 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
+    "@apollo/client": "^3.7.17",
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
     "@mui/icons-material": "^5.14.0",
@@ -23,11 +22,12 @@
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
+    "graphql": "^16.7.1",
     "next": "13.4.4",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.9.0",
+    "react-icons": "^4.10.1",
     "react-svg": "^16.1.17",
     "tailwindcss": "^3.3.2",
     "typescript": "5.1.3"
