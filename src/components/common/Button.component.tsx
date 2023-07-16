@@ -1,3 +1,5 @@
+import { SvgIconTypeMap } from '@mui/material';
+import { OverridableComponent } from '@mui/material/OverridableComponent';
 import React, { FC } from 'react'
 import {FcGoogle} from 'react-icons/fc'
 

@@ -17,7 +17,7 @@ const Socials: FC<SocialsProps> = ({ isDarkMode }) => {
 
   return (
     <div className='flex justify-center items-center' style={socStyle}>
-      <ul className="list-none w-48 flex justify-between">
+      <ul className="h-10 list-none w-48 flex justify-between">
         <li> 
           <a href="/">
             <Image src={linkedin} className="transition-all hover:w-16 hover:h-16 w-9 h-9" alt={'linkedin'} />
