@@ -1,25 +1,14 @@
 "use client"
 import yuHacks2023Arrow from '@/public/images/yuHacks2023Arrow.png';
 import HackerCardLogin from '@/public/images/HackerCardLogin.png';
-
+import { useQuery, gql, useMutation } from '@apollo/client'
 import Image from 'next/image';
 import InputField from '@/components/common/InputField.component';
 import Button from '@/components/common/Button.component';
 import { FormEvent, useState } from 'react';
-
-import {
-    ApolloClient,
-    InMemoryCache,
-    ApolloProvider,
-    useMutation,
-    gql
-} from "@apollo/client";
 import AccentedButton from '@/components/common/AccentedButton.component';
 
-const client = new ApolloClient({
-    cache: new InMemoryCache(),
-    uri: "",
-});
+
 
 
 const LOGIN_MUTATION = gql`
@@ -45,6 +34,9 @@ const RESGISTRATION_MUTATION = gql`
   `;
 
 export default function LoginPage() {
+
+    const [login] = useMutation(LOGIN_MUTATION);
+    const [registerUser] = useMutation(RESGISTRATION_MUTATION);
 
     const [firstname, setFirstname] = useState<string>('');
     const [lastname, setLastname] = useState<string>('');
@@ -82,14 +74,14 @@ export default function LoginPage() {
             console.log('Password:', password);
         e.preventDefault();
 
-            // login({
-            //     variables: {
-            //         input: {
-            //             email: email,
-            //             password: password
-            //         }
-            //     }
-            // });
+            login({
+                variables: {
+                    input: {
+                        email: email,
+                        password: password
+                    }
+                }
+            });
 
         } else if ((e.nativeEvent as any).submitter.id === 'login' && !loginMode) {
             setLoginMode(true);
@@ -107,16 +99,16 @@ export default function LoginPage() {
             console.log('Password:', password);
             
 
-            // registerUser({
-            //     variables: {
-            //         input: {
-            //             firstName: firstname,
-            //             lastName: lastname,
-            //             email: email,
-            //             passwodrd: password,
-            //         }
-            //     }
-            // });
+            registerUser({
+                variables: {
+                    input: {
+                        firstName: firstname,
+                        lastName: lastname,
+                        email: email,
+                        password: password,
+                    }
+                }
+            });
 
         }
         else if ((e.nativeEvent as any).submitter.id === 'Google') {
@@ -134,7 +126,7 @@ export default function LoginPage() {
 
     return (
         // <ApolloProvider client={client}>
-
+        
             <div className="DashboardLoginDesktop w-full h-full relative bg-neutral-100">
 
                 <div className="Logo w-[155px] h-[30px] ml-4 sm:ml-4 mt-12 md:ml-12 lg:ml-12" >
