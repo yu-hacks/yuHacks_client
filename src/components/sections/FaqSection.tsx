@@ -39,12 +39,12 @@ const FAQ: FC = () => {
     const [faq, setFaqs] = useState<questions[]>(faqData);
 
     return(
-        <div className="w-full h-100vh mx-auto min-[320px]:px-3 md:px-3 lg:px-20 py-12">
+        <div className="w-full h-100vh  min-[320px]:px-3 md:px-3 lg:px-20 py-12 mx-auto">
             <Card type="opaque">
-                <h1 className='text-white text-[39px] text-center font-HindMadurai'>Frequently asked questions</h1>
+                <h1 className='text-white text-[39px] text-center font-HindMadurai lg:mx-20 mt-5'>Frequently asked questions</h1>
                 <br/><br/>
 
-                <div className='grid-container justify-center'>
+                <div className='grid-container justify-center lg:mx-10 mb-5'>
                     {faq.map((q, index) => {
                         return(
                             <Question question={q.question} answer={q.answer} index={index}/>
@@ -64,7 +64,7 @@ type Props = {
 
 const Question: FC<Props> = ({question, answer, index}) => {
     return(
-        <div className=''>
+        <div className='lg:mr-8'>
             <div className='flex'>
                 <Image className='w-[12px] h-[20px] mr-2'
                        src={vector} 
