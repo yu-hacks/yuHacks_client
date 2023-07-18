@@ -1,5 +1,6 @@
 import AboutSection from "@/components/sections/AboutSection";
 import HeroSection from "@/components/sections/HeroSection";
+import FaqSection from "@/components/sections/FaqSection";
 
 export default function Home() {
   
@@ -8,6 +9,7 @@ export default function Home() {
       {/* <div className="bg-red-500">Hello world</div> */}
       <HeroSection />
       <AboutSection />
+      <FaqSection />
     </main>
   )
 }

@@ -3,7 +3,7 @@
 }
 .grid-container{
     display: inline-grid; 
-    grid-template-columns: 5fr 2fr; 
+    grid-template-columns: 1fr 1fr; 
     grid-gap: 30px; 
 }
 
@@ -18,3 +18,19 @@
     grid-template-rows: 1fr 1fr 1fr; 
     grid-gap: 85px; 
 }
+
+.rotated {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          width: 12px;
+          height: 20px;
+          margin-right: 1rem;
+}
+
+.rotate-back{
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            width: 12px;
+          height: 20px;
+          margin-right: 1rem;
+  }
