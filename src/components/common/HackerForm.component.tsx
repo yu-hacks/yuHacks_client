@@ -9,7 +9,7 @@ interface HackerFormProps {
 }
 export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
     return (
-        <div className='h-screen w-[80%] mx-auto bg-[#F6F6F6]'>
+        <div className='h-[100%] mx-auto bg-[#F6F6F6] px-20'>
             <form action="#" className='pt-24 pb-10'>
                 <h1 className={`font-HindMadurai text-[32px] font-bold text-black`}>Hacker Application</h1>
                 <hr className='h-[1.5px] bg-black/20' />
@@ -42,10 +42,10 @@ export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
                     </label>
                     <fieldset className={`mt-3 sm:flex sm:justify-between sm:flex-nowrap sm:gap-9 sm:items-end`}>
                         <label className={`sm:flex-grow text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Your Repository (Github, Gitlab, etc.)
-                            <input className='w-full text-black block h-12 p-6 font-HindMadurai text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="repo" placeholder='www.mygit.com/...' />
+                            <input className='w-full text-black block h-12 p-6 font-HindMadurai text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="repo" placeholder='www.github.com/username' />
                         </label>
                         <label className={`sm:flex-grow block text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Linkedin Page
-                            <input className='sm:mt-0 mt-3 w-full block text-black h-12 p-6 font-HindMadurai text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="linkedin" placeholder='www.linkedin.com/...' />
+                            <input className='sm:mt-0 mt-3 w-full block text-black h-12 p-6 font-HindMadurai text-sm bg-white border-[2px] border-solid border-black border-opacity-[0.13] rounded-[4px]' type="text" name="linkedin" placeholder='www.linkedin.com/username' />
                         </label>
                     </fieldset>
                     <label className={`block mt-3 text-sm font-HindMadurai font-medium text-black text-opacity-[0.55]`}>Resume (in PDF Format)</label>
@@ -80,8 +80,13 @@ export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
                 <fieldset className={`flex justify-between mt-14`}>
                     {!isHacker && <Button bgColor='bg-[#DE4F30]' color='text-white' type="reset" name="Reject" />}
                     <div className={`flex justify-end ${isHacker && 'w-full'}`}>
-                        <Button bgColor='bg-transparent' color='text-black' type="reset" name="Clear" />
-                        <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
+                        <div className="mr-8">
+                            <Button bgColor='bg-transparent' color='text-black' type="reset" name="Clear" />
+                        </div>
+                        
+                        <div className="mr-8"> 
+                            <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
+                        </div>
                     </div>
                 </fieldset>
             </form>
