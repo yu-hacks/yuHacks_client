@@ -31,7 +31,7 @@ const AboutPage2 = () => {
 
   return (
     <div className={`h-screen flex justify-center items-center bg-[#202020]`}>
-      <div className={`flex lg:flex-row flex-col shrink-0 h-3/6 w-11/12 items-center justify-between bg-white bg-opacity-[0.13] rounded-[32px] shadow-lg backdrop-blur-md`}>
+      <div className={`flex lg:flex-row flex-col shrink-0 h-5/6 w-10/12 items-center justify-between bg-white bg-opacity-[0.13] rounded-[32px] shadow-lg backdrop-blur-md`}>
         <article className='md:ml-16 ml-9 mt-10 sm:mt-0 pr-11 lg:h-full lg:w-[40%] h-[40%] w-full flex flex-col justify-evenly'>
           <div>
             <IoIosArrowForward className='text-[#58A0D4] sm:w-10 sm:h-10 xl:w-16 xl:h-16 md:w-12 md:h-12 h-9 w-9' />

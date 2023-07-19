@@ -30,7 +30,7 @@ const Card: FC<Props> = ({ children, type, pl, pt, pb, pr }) => {
 
 
         <div className=' items-center justify-center'>
-          <div className={`w-full  justify-center bg-white bg-opacity-[.13] backdrop-blur-[18px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl pl-[${pl}px] pt-[${pt}px] pb-[${pb}px] pr-[${pr}px] `}>
+          <div className={`w-fit  justify-center bg-white bg-opacity-[.13] backdrop-blur-[18px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl pl-[${pl}px] pt-[${pt}px] pb-[${pb}px] pr-[${pr}px] `}>
           {children}
           </div>   
         </div>
@@ -40,7 +40,7 @@ const Card: FC<Props> = ({ children, type, pl, pt, pb, pr }) => {
 
 
         <div className=' items-center justify-center'>
-          <div className={`w-full  justify-center shadow-sm border-2 border-solid border-black rounded-2xl pl-[${pl}px] pt-[${pt}px] pb-[${pb}px] pr-[${pr}px]`}>
+          <div className={`w-fit  justify-center shadow-sm border-2 border-solid border-black rounded-2xl pl-[${pl}px] pt-[${pt}px] pb-[${pb}px] pr-[${pr}px]`}>
           {children}
           </div> 
         </div>  
@@ -48,7 +48,7 @@ const Card: FC<Props> = ({ children, type, pl, pt, pb, pr }) => {
     } else{
       return(
         <div className='  items-center justify-center'>
-          <div className={'w-full justify-center  bg-white bg-opacity-[.35]  backdrop-blur-[13px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl pl-[${pl}px] pt-[${pt}px] pb-[${pb}px] pr-[${pr}px]'}>
+          <div className={'w-fit justify-center  bg-white bg-opacity-[.35]  backdrop-blur-[13px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl pl-[${pl}px] pt-[${pt}px] pb-[${pb}px] pr-[${pr}px]'}>
             {children}
           </div> 
         </div> 
@@ -58,7 +58,7 @@ const Card: FC<Props> = ({ children, type, pl, pt, pb, pr }) => {
     if(type === 'opaque'){
       return(
         <div className=' items-center justify-center'>
-          <div className='w-full  justify-center bg-white bg-opacity-[.13]  backdrop-blur-[18px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl p-[25px]'>
+          <div className='w-fit  justify-center bg-white bg-opacity-[.13]  backdrop-blur-[18px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl p-[25px]'>
           {children}
           </div> 
         </div>  
@@ -66,7 +66,7 @@ const Card: FC<Props> = ({ children, type, pl, pt, pb, pr }) => {
     }else if(type === 'outline'){
       return(
         <div className=' items-center justify-center'>
-          <div className='w-full  justify-center shadow-sm border-2 border-solid border-black rounded-2xl p-[25px]'>
+          <div className='w-fit  justify-center shadow-sm border-2 border-solid border-black rounded-2xl p-[25px]'>
           {children}
           </div>   
         </div>
@@ -76,7 +76,7 @@ const Card: FC<Props> = ({ children, type, pl, pt, pb, pr }) => {
   
   return(
     <div className='  items-center justify-center'>
-      <div className={'w-full justify-center  bg-white bg-opacity-[.35]  backdrop-blur-[13px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl p-[25px]'}>
+      <div className={'w-fit justify-center  bg-white bg-opacity-[.35]  backdrop-blur-[13px] shadow-sm border-2 border-solid border-black/[.05] rounded-2xl p-[25px]'}>
         {children}
       </div> 
     </div> 

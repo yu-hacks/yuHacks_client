@@ -14,7 +14,7 @@ import major from "@/public/images/major.png";
 const AboutPage1: FC = () => {
   return (
     <div className="md:flex RadicalBackground  w-full h-100vh mx-auto min-[320px]:px-3 md:px-3 lg:px-20 py-12">
-      <div className="min-[320px]:m-auto md:m-1  sm:w-[500px] md:w-screen md:mr-5 justify-center align-middle">
+      <div className="min-[320px]:m-auto md:m-1 min-[320px]:w-[350px] sm:w-[500px] md:w-screen md:mr-5 justify-center align-middle">
         <Card type="opaque">
           <div className="h-[500px] min-[320px]:p-3 sm:p-8 md:p-5 align-middle">
             <Image src={vector} alt="vector" className=" " />{" "}
@@ -39,9 +39,9 @@ const AboutPage1: FC = () => {
       </div>
       <br />
 
-      <div className="min-[320px]:m-auto md:m-1  sm:w-[500px]  lg:mx-2">
+      <div className="min-[320px]:m-auto md:m-1 min-[320px]:w-[350px] sm:w-[500px]  lg:mx-2">
         <Card type="opaque">
-          <div className="h-[500px] min-[320px]:p-3 sm:p-9 md:p-3 align-middle">
+          <div className="h-[500px] min-[320px]:p-3 sm:p-9 md:p-8 align-middle">
             <h3 className=" text-[24px] text-[#c3c3c3] mx-3">
               Statistics from out last Hackathon
             </h3>
@@ -62,8 +62,8 @@ const AboutPage1: FC = () => {
                 <br />
 
                 <div className="items-center flex">
-                  <Image src={school} alt="school" className="mr-4 h-[40px]" />
-                  <div className="">
+                  <Image src={school} alt="school" className="mr-4" />
+                  <div className="w-[200px]">
                     <Image src={img59} alt="59" />
 
                     <p className="text-[#717171] text-[20px] font-HindMadurai mt-3">

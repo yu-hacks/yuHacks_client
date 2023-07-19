@@ -9,21 +9,13 @@ import RedHackerCard from "@/public/images/RedCard.png";
 import Yuhacks2023 from "@/public/images/yuhacks2023.png";
 import LoginRegistration from "@/components/common/LoginRegistration.component";
 import Menu from "@/public/images/coming-soon-page/Menu.png";
-import { useRouter } from "next/router";
 
 const HeroSection: FC = () => {
-  // const router = useRouter();
+  // const [showPopup, setShowPopup] = useState(false);
 
-  // const isLoggedIn = '';
-
-  // useEffect(() => {
-  //   if(isLoggedIn){
-  //     router.push("/HackerFormSection");
-  //   }
-  //   else {
-  //     router.push("/LoginPage");
-  //   }
-  // })
+  // const handleDivClick = () => {
+  //   setShowPopup(!showPopup);
+  // };
 
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   useEffect(() => {
