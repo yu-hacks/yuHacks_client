@@ -7,7 +7,8 @@ import InputField from '@/components/common/InputField.component';
 import Button from '@/components/common/Button.component';
 import { FormEvent, useState } from 'react';
 import AccentedButton from '@/components/common/AccentedButton.component';
-
+import { useRouter } from 'next/navigation';
+import HeroSection from '@/components/sections/HeroSection';
 
 
 
@@ -35,9 +36,23 @@ const RESGISTRATION_MUTATION = gql`
 
 export default function LoginPage() {
 
-  const [login] = useMutation(LOGIN_MUTATION);
-  const [registerUser] = useMutation(RESGISTRATION_MUTATION);
+  const router = useRouter();
 
+  const [login, { data: loginData }] = useMutation(LOGIN_MUTATION, {
+    onCompleted: data => {
+      if(data?.loginUser.token){
+        localStorage.setItem('token', data.loginUser.token);
+        setIsLoggedIn(true);
+        router.push('../components/sections/HeroSection');
+
+      }
+    },
+    onError: error => {
+      console.error(error);
+    },
+  });
+  const [registerUser] = useMutation(RESGISTRATION_MUTATION);
+  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
   const [firstname, setFirstname] = useState<string>('');
   const [lastname, setLastname] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -209,6 +224,7 @@ export default function LoginPage() {
 
 
     </div>
+    
     // </ApolloProvider>
 
   )
