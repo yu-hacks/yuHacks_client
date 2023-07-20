@@ -20,17 +20,17 @@ const Socials: FC<SocialsProps> = ({ isDarkMode }) => {
       <ul className="h-10 list-none w-48 flex justify-between">
         <li> 
           <a href="/">
-            <Image src={linkedin} className="transition-all hover:w-16 hover:h-16 w-9 h-9" alt={'linkedin'} />
+            <Image src={linkedin} className={`hover:opacity-60 w-9 h-9`} alt={'linkedin'} />
           </a>
         </li>
         <li>
           <a href="/">
-            <Image src={instagram} className="transition-all hover:w-16 hover:h-16 w-9 h-9" alt={'instagram'} />
+            <Image src={instagram} className="hover:opacity-60 w-9 h-9" alt={'instagram'} />
           </a>
         </li>
         <li>
           <a href="/">
-            <Image src={twitter} className="transition-all hover:w-16 hover:h-16 w-9 h-9" alt={'twitter'} />
+            <Image src={twitter} className="hover:opacity-60 w-9 h-9" alt={'twitter'} />
           </a>
         </li>
       </ul>

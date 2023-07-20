@@ -5,10 +5,11 @@ import { useQuery, gql, useMutation } from '@apollo/client'
 import Image from 'next/image';
 import InputField from '@/components/common/InputField.component';
 import Button from '@/components/common/Button.component';
-import { FormEvent, useState } from 'react';
+import { FC, FormEvent, useEffect, useState } from 'react';
 import AccentedButton from '@/components/common/AccentedButton.component';
-
-
+import { useRouter } from 'next/navigation';
+import jwt_decode from 'jwt-decode';
+import validateToken, {getTokenFromStorage, setTokenInStorage} from '@/utils/token-auth';
 
 
 const LOGIN_MUTATION = gql`
@@ -33,20 +34,40 @@ const RESGISTRATION_MUTATION = gql`
   }
   `;
 
-export default function LoginPage() {
+  interface decodedToken {
+    _id: String;
+    email: String;
+    exp: number,
+    iat: number
+  }
 
-  const [login] = useMutation(LOGIN_MUTATION);
+const LoginPage: FC= () => {
+
+  const router = useRouter();
+
+  const [login, { data, loading, error }] = useMutation(LOGIN_MUTATION, {
+    onError: (error) => {
+      console.error(error.toString());
+      if(error.toString().includes(' User not found')){
+        setemailError(true);
+      }
+      else  if(error.toString().includes('Password is incorrect')){
+        setpasswordError(true);
+      }
+    }
+  });
+
+
   const [registerUser] = useMutation(RESGISTRATION_MUTATION);
-
   const [firstname, setFirstname] = useState<string>('');
   const [lastname, setLastname] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
-  const [loginMode, setLoginMode] = useState<boolean>(true);
+  const[emailError, setemailError] = useState<boolean>(false);
+  const[passwordError, setpasswordError] = useState<boolean>(false);
 
-  // const [login] = useMutation(LOGIN_MUTATION);
-  // const [registerUser] = useMutation(RESGISTRATION_MUTATION);
+  const [loginMode, setLoginMode] = useState<boolean>(true);
 
 
   const handleFirstNameChange = (value: string) => {
@@ -59,13 +80,15 @@ export default function LoginPage() {
 
   const handleEmailChange = (value: string) => {
     setEmail(value);
+    setemailError(false);
   };
 
   const handlePasswordChange = (value: string) => {
     setPassword(value);
+    setpasswordError(false);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if ((e.nativeEvent as any).submitter.id === 'login' && loginMode) {
@@ -74,7 +97,8 @@ export default function LoginPage() {
       console.log('Password:', password);
       e.preventDefault();
 
-      login({
+    try{
+      const { data }  = await login({
         variables: {
           input: {
             email: email,
@@ -82,12 +106,50 @@ export default function LoginPage() {
           }
         }
       });
+      console.log(data); 
+
+      setTokenInStorage(data.loginUser.token);
+    
+      const token = getTokenFromStorage();
+
+
+      if (token!=null && validateToken(token)) {
+        const decodedToken: decodedToken = jwt_decode(token);
+        console.log(decodedToken._id);
+        console.log(decodedToken.iat);
+        console.log(decodedToken.exp);
+        console.log(decodedToken.email);
+        console.log(Math.floor(Date.now() / 1000));
+        console.log(decodedToken);
+
+
+        console.log('Login successful');
+
+        console.log(getTokenFromStorage());
+
+
+        router.push('/');
+      } else {
+        // Login failed
+        console.log('Login failed'); 
+      }
+
+    }
+    catch(error){
+
+      console.error(error);
+    }
+
 
     } else if ((e.nativeEvent as any).submitter.id === 'login' && !loginMode) {
+      setemailError(false);
+      setpasswordError(false);
       setLoginMode(true);
 
 
     } else if ((e.nativeEvent as any).submitter.id === 'register' && loginMode) {
+      setemailError(false);
+      setpasswordError(false);
       setLoginMode(false);
     }
 
@@ -98,8 +160,8 @@ export default function LoginPage() {
       console.log('Email:', email);
       console.log('Password:', password);
 
-
-      registerUser({
+      
+      const {data} = await registerUser({
         variables: {
           input: {
             firstName: firstname,
@@ -110,11 +172,14 @@ export default function LoginPage() {
         }
       });
 
+      if(data.registerUser) {
+        console.log("User created"); 
+        setLoginMode(true);
+      }
+
     }
     else if ((e.nativeEvent as any).submitter.id === 'Google') {
-
       console.log('Google ');
-
     }
 
     setFirstname('');
@@ -125,11 +190,8 @@ export default function LoginPage() {
   };
 
   return (
-    // <ApolloProvider client={client}>
-
-    <div className="DashboardLoginDesktop w-full h-full relative bg-neutral-100">
-
-      <div className="Logo w-[155px] h-[30px] ml-4 sm:ml-4 mt-12 md:ml-12 lg:ml-12" >
+    <div className="DashboardLoginDesktop w-screen h-screen bg-neutral-100">
+      <div className="Logo w-[155px] h-[30px] pt-8 ml-4 sm:ml-4 md:ml-12 lg:ml-12" >
         <Image src={yuHacks2023Arrow} alt="My Image" width={152} height={27} />
       </div>
 
@@ -139,7 +201,6 @@ export default function LoginPage() {
         <div className="HackerCard w-full  sm:w-full lg:w-1/2 md:w-1/2 flex mb-4 sm:mb-4 md:mb-32 lg:mb-32 justify-center items-center ">
 
           <Image src={HackerCardLogin} alt="My Image" width={427} height={475} />
-          {/* <Image src={HackerCardLogin} alt="My Image" width={200} height={200} /> */}
 
         </div>
 
@@ -166,14 +227,14 @@ export default function LoginPage() {
 
               <div className="Email mt-4 ml-8 text-neutral-400 text-sm font-medium">Email</div>
               <div className="Email flex ml-8">
-                <InputField Disabled={false} Error={false} message={'Invalid Email'} type="email" placeholder='Email' value={email} onChange={handleEmailChange} />
+                <InputField Disabled={false} Error={emailError} message={'Invalid Email'} type="email" placeholder='Email' value={email} onChange={handleEmailChange} />
               </div>
 
               <div className="Password mt-4 ml-8 text-neutral-400 text-sm font-medium">Password</div>
 
               <div className="Password flex ml-8">
 
-                <InputField Disabled={false} Error={false} message={'Invalid Password'} type="password" placeholder='Password' value={password} onChange={handlePasswordChange} />
+                <InputField Disabled={false} Error={passwordError} message={'Invalid Password'} type="password" placeholder='Password' value={password} onChange={handlePasswordChange} />
 
               </div>
 
@@ -209,7 +270,8 @@ export default function LoginPage() {
 
 
     </div>
-    // </ApolloProvider>
 
   )
 }
+
+export default LoginPage;
