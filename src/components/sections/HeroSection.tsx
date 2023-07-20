@@ -9,21 +9,22 @@ import RedHackerCard from "@/public/images/RedCard.png";
 import Yuhacks2023 from "@/public/images/yuhacks2023.png";
 import LoginRegistration from "@/components/common/LoginRegistration.component";
 import Menu from "@/public/images/coming-soon-page/Menu.png";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import Cookies from 'js-cookie';
 
 const HeroSection: FC = () => {
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const isLoggedIn = '';
 
-  // useEffect(() => {
-  //   if(isLoggedIn){
-  //     router.push("/HackerFormSection");
-  //   }
-  //   else {
-  //     router.push("/LoginPage");
-  //   }
-  // })
+  const isLoggedIn = !!Cookies.get('authToken'); // replace 'authToken' with the name of your auth cookie
+
+  const logout = () => {
+    Cookies.remove('authToken'); // replace 'authToken' with the name of your auth cookie
+    router.push('/login');
+  };
+
+
+
 
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   useEffect(() => {
@@ -70,9 +71,8 @@ const HeroSection: FC = () => {
           </div>
 
           <div
-            className={`flex flex-row items-center justify-between mt-[4.3rem] mr-8 sm: mr-8 lg:mr-16 ml-auto h-[32px] ${
-              isSmallScreen ? "w-1/16 " : "w-[320px]"
-            }`}
+            className={`flex flex-row items-center justify-between mt-[4.3rem] mr-8 sm: mr-8 lg:mr-16 ml-auto h-[32px] ${isSmallScreen ? "w-1/16 " : "w-[320px]"
+              }`}
           >
             {isSmallScreen ? (
               <Image
@@ -83,11 +83,17 @@ const HeroSection: FC = () => {
             ) : (
               <Socials isDarkMode={true} />
             )}
-            <Link href="/login" passHref>
-              <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:block text-base font-medium">
-                Portal
+            {isLoggedIn ? (
+              <div onClick={logout} className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:block text-base font-medium">
+                Logout
               </div>
-            </Link>
+            ) : (
+              <Link href="/login" passHref>
+                <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:block text-base font-medium">
+                  Login
+                </div>
+              </Link>
+            )}
             <div className="Ellipse5  w-8 h-8 bg-white bg-opacity-30 rounded-full hidden sm:block border border-neutral-800 border-opacity-40" />
           </div>
           {/* {showPopup && <LoginRegistration />} */}
