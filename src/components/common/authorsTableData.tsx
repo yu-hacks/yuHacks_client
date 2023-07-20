@@ -5,7 +5,7 @@ export const authorsTableData = [
     date: "23/04/18",
     website: true,
     git:true,
-    linkedIn: true,
+    linkedin: true,
     resume: true,
     completion: "11/23"
 
@@ -16,7 +16,7 @@ export const authorsTableData = [
     date: "11/01/19",
     website: false,
     git:true,
-    linkedIn: false,
+    linkedin: false,
     resume: true,
     completion: "11/23"
 
@@ -27,7 +27,7 @@ export const authorsTableData = [
     date: "19/09/17",
     website: true,
     git:true,
-    linkedIn: true,
+    linkedin: true,
     resume: false,
     completion: "11/23"
   },
@@ -37,7 +37,7 @@ export const authorsTableData = [
     date: "24/12/08",
     website: false,
     git:true,
-    linkedIn: true,
+    linkedin: true,
     resume: false,
     completion: "11/23"
   },
@@ -47,7 +47,7 @@ export const authorsTableData = [
     date: "04/10/21",
     website: false,
     git:true,
-    linkedIn: true,
+    linkedin: true,
     resume: true,
     completion: "11/23"
   },
@@ -57,7 +57,7 @@ export const authorsTableData = [
     date: "14/09/20",
     website: false,
     git:false,
-    linkedIn: true,
+    linkedin: true,
     resume: true,
     completion: "11/23"
   },

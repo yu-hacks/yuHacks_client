@@ -3,12 +3,9 @@ import {
     Card,
     CardBody,
     Typography,
-    Avatar
 } from "@material-tailwind/react";
 import authorsTableData from "@/components/common/authorsTableData";
-import bug from '@/public/images/LinkedIn.png';
-import {FaCheck, FaCheckCircle} from "react-icons/fa";
-import {color} from "framer-motion";
+import {FaCheckCircle} from "react-icons/fa";
 
 export function Dashboard() {
 
