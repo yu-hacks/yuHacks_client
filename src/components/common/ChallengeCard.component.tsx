@@ -93,8 +93,8 @@ const Card: FC<Props> = ({ deg, index, text, right, bottom, handleClick }) => {
 
     return (
         <motion.div
-            className={`absolute rounded-lg inset-0
-            shadow-md xl:w-72 xl:h-[400px] md:w-60 md:h-[380px] w-44 h-[250px] bg-[#FEFFFC] flex items-center`}
+            className={`  absolute rounded-lg inset-0
+            shadow-md xl:w-72 xl:h-[400px] lg:w-72 lg:h-[400px] md:w-60 md:h-[330px] w-44 h-[250px] sm:w-52 sm:h-[280px] bg-[#FEFFFC] flex items-center`}
             style={{
                 // right: `${right}`,
                 // bottom: `${bottom}`,
@@ -111,8 +111,8 @@ const Card: FC<Props> = ({ deg, index, text, right, bottom, handleClick }) => {
 
 
             <div className='h-[90%] w-5/6 mx-auto border-t-[3px] border-b-[3px] border-t-[#c95656] border-b-[#58A0D4] border-opacity-75'>
-                <Image src={bugImg} alt={'bug'} className='xl:w-28 xl:h-28 md:w-16 md:h-16 w-10 h-10 mx-auto md:my-10 my-5' />
-                <div className="flex flex-col w-5/6 mx-auto my-5 font-HindMadurai text-center text-black md:text-xl text-sm">
+                <Image src={bugImg} alt={'bug'} className='xl:w-28 xl:h-28 lg:w-28 lg:h-28 md:w-16 md:h-16 w-10 h-10 mx-auto md:my-10 my-5' />
+                <div className="flex justify-center w-5/6 mx-auto my-5 font-HindMadurai text-center text-black md:text-xl text-sm">
                     Bug-hunting challenge
                 </div>
                 <div className="flex flex-col w-[90%] mx-auto font-Inconsolata text-center text-black text-opacity-50 md:text-[14px] text-xs leading-none">
