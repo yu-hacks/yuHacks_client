@@ -11,9 +11,13 @@ import imgdec from "@/public/images/56.3.png";
 import school from "@/public/images/School.png";
 import major from "@/public/images/major.png";
 
-const AboutPage1: FC = () => {
+interface About{
+  id?: string;
+}
+
+const AboutPage1: FC<About> = ({id}) => {
   return (
-    <div className="md:flex RadicalBackground  w-full h-100vh mx-auto min-[320px]:px-3 md:px-3 lg:px-20 py-12">
+    <div id={id} className="md:flex RadicalBackground  w-full h-100vh mx-auto min-[320px]:px-3 md:px-3 lg:px-20 py-12">
       <div className="min-[320px]:m-auto md:m-1  sm:w-[500px] md:w-screen md:mr-5 justify-center align-middle">
         <Card type="opaque">
           <div className="h-[500px] min-[320px]:p-3 sm:p-8 md:p-5 align-middle">
