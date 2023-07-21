@@ -74,7 +74,7 @@ export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
 
     const [file, setFile] = useState<File>();
 
-    const [completed, setCompleted] = useState<boolean>();
+    const [completed, setCompleted] = useState<boolean>(false);
 
 
 
@@ -172,7 +172,6 @@ export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
                     const decodedToken:decodedToken = jwtDecode(token);
                     const id = decodedToken._id;
                     console.log(id);
-                    setCompleted(true);
                     if(file) {
                     const {data} = await applyHacker({
                         variables: {
@@ -187,6 +186,7 @@ export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
                       });
                       if(data?.applyHacker) {
                         console.log('Application Successful');
+                        setCompleted(true);
                       };
 
                     }
