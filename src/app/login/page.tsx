@@ -190,13 +190,13 @@ const LoginPage: FC= () => {
   };
 
   return (
-    <div className="DashboardLoginDesktop w-screen h-screen bg-neutral-100">
+    <div className="DashboardLoginDesktop w-full h-full  bg-neutral-100">
       <div className="Logo w-[155px] h-[30px] pt-8 ml-4 sm:ml-4 md:ml-12 lg:ml-12" >
         <Image src={yuHacks2023Arrow} alt="My Image" width={152} height={27} />
       </div>
 
 
-      <div className="MainPage flex flex-col max-w-[950px] max-h[505px] sm:flex-col md:flex-row lg:flex-row justify-center align-center mx-auto my-4 sm:my-4 md:my-16 lg:my-16" >
+      <div className="MainPage flex flex-col max-w-[950px] max-h[505px] sm:flex-col md:flex-row lg:flex-row justify-center align-center mx-auto py-4 sm:py-4 md:py-16 lg:py-16 " >
 
         <div className="HackerCard w-full  sm:w-full lg:w-1/2 md:w-1/2 flex mb-4 sm:mb-4 md:mb-32 lg:mb-32 justify-center items-center ">
 
