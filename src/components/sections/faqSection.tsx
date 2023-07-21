@@ -11,6 +11,10 @@ interface questions {
     answer: string;
 }
 
+interface FAQ {
+    id?: string;
+}
+
 const faqData: questions[] = [
     { question: 'What is yuHacks?', answer: 'yuHacks(2023) is the sixth iteration of this student-led event. Our goal is to provide a fun, inclusive, and growth-focused experience that prepares participants for their future tech careers.' },
     { question: 'Who can participate?', answer: 'ans1' },
@@ -35,11 +39,11 @@ function open(id: string, arrowid: string) {
     }
 }
 
-const FAQ: FC = () => {
+const FAQ: FC<FAQ> = ({id}) => {
     const [faq, setFaqs] = useState<questions[]>(faqData);
 
     return (
-        <div className="w-full h-100vh  min-[320px]:px-3 md:px-3 lg:px-20 py-12 m-auto">
+        <div id={id} className="w-full h-100vh  min-[320px]:px-3 md:px-3 lg:px-20 py-12 m-auto">
             <div className="min-[320px]:m-auto min-[320px]:w-[350px] sm:w-[500px] md:w-full justify-center align-middle">
                 <Card type="opaque">
                     <h1 className='text-white text-[39px] text-center font-HindMadurai lg:mx-20 mt-5'>Frequently asked questions</h1>

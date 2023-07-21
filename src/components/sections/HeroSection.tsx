@@ -10,13 +10,17 @@ import LoginRegistration from "@/components/common/LoginRegistration.component";
 import Menu from "@/public/images/coming-soon-page/Menu.png";
 import validateToken, { getTokenFromStorage, setTokenInStorage } from '@/utils/token-auth'
 import Navbar from "./Navbar";
+import Application from "../common/Application.component";
 
+interface Hero {
+  id?: string;
+}
 
-const HeroSection: FC = () => {
+const HeroSection: FC<Hero> = ({id}) => {
 
   return (
     <>
-      <div className="RadicalBackground relative  w-full h-100vh bg-gradient-to-b from-[#303030] to-[#202020]	 ">
+      <div id={id} className="RadicalBackground relative  w-full h-100vh bg-gradient-to-b from-[#303030] to-[#202020]	 ">
        
         <Navbar/>
         <div className="flex flex-col items-center justify-center mx-4">
@@ -37,18 +41,7 @@ const HeroSection: FC = () => {
               September 29 - October 1
             </span>
           </div>
-          <div className="mt-8 flex flex-col sm:flex-row lg:flex-row">
-            <div className="order-3 sm:order-1">
-              <Button name={"Volunteer Application"} />
-            </div>
-
-            <div className=" mt-0 lg:mx-2 md: mx-2 sm:mt-0 "></div>
-            <div className="order-1 sm:order-3 mx-4">
-              <Button name={"Hacker Application"} />
-            </div>
-
-            <div className="order-2 sm:order-2 mb-4 "></div>
-          </div>
+          <Application/>
           <Image
             className="mt-16 hidden sm:block"
             src={RedHackerCard}

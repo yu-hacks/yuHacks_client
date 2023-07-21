@@ -1,15 +1,21 @@
 "use client"
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Socials from "@/components/common/Socials.component";
 import Arrow from "@/public/images/navicon.png";
 import Menu from "@/public/images/coming-soon-page/Menu.png";
 
-import validateToken, { getTokenFromStorage, setTokenInStorage } from '@/utils/token-auth'
+import validateToken, { getTokenFromStorage } from '@/utils/token-auth'
 
 
-const Navbar: FC = () => {
+const Navbar = () => {
+
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+      setHydrated(true);
+  }, []);
+
 
   return (
     <>
@@ -25,7 +31,7 @@ const Navbar: FC = () => {
                 height={36}
               />
 
-              <Link href="/" className="hidden sm:hidden md:block lg:block hover:opacity-60">
+              <Link href="#About1" className="hidden sm:hidden md:block lg:block hover:opacity-60">
                 About
               </Link>
               <Link href="/" className="hidden sm:hidden md:block lg:block hover:opacity-60  ">
@@ -34,7 +40,7 @@ const Navbar: FC = () => {
               <Link href="/" className="hidden sm:hidden md:block lg:block hover:opacity-60">
                 Sponsors
               </Link>
-              <Link href="/" className="mr-4 hidden sm:hidden md:block lg:block hover:opacity-60 ">
+              <Link href="#FAQ" className="mr-4 hidden sm:hidden md:block lg:block hover:opacity-60 ">
                 FAQ
               </Link>
             </ul>
@@ -60,7 +66,9 @@ const Navbar: FC = () => {
               />
             </div>
 
-              {getTokenFromStorage() && validateToken(getTokenFromStorage()) ? <Link href="/login" passHref onClick={() => { localStorage.removeItem('token'); console.log(getTokenFromStorage()) }}>
+              {!hydrated ?   <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:hidden md:block lg:block text-base font-medium hover:opacity-60">
+                  Loading...
+                </div>  : getTokenFromStorage() && validateToken(getTokenFromStorage()) ? <Link href="/login" passHref onClick={() => { localStorage.removeItem('token'); console.log(getTokenFromStorage()) }}>
                 <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:hidden md:block lg:block text-base font-medium hover:opacity-60">
                   Log Out
                 </div>
