@@ -76,8 +76,9 @@ const Question: FC<Props> = ({ question, answer, index }) => {
                 />
                 <h3 className='text-white font-HindMadurai text-[16px]'>{question}</h3>
             </div>
-            <p className='text-[#c3c3c3] font-HindMadurai text-[16px] sm:w-[291px] my-3 ml-7' id={`answer+${index}`} style={{ display: "none" }}>{answer}</p>
-        </div>
+
+            <p className='text-[#c3c3c3] font-HindMadurai text-[16px] sm:w-[291px] my-3 ml-5' id={`answer+${index}`} style={{display:"none"}}>{answer}</p>
+        </div> 
     );
 };
 
