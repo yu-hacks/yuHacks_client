@@ -20,16 +20,16 @@ const faqData: questions[] = [
     { question: 'What if I am not in Ontario?', answer: 'ans5' }
 ]
 
-function open(id: string, arrowid: string) {
+function open (id : string, arrowid: string){
     var item = document.getElementById(id) as HTMLInputElement
     var arrow = document.getElementById(arrowid) as HTMLInputElement
 
-    if (item) {
-        if (item.style.display === "none") {
-            item.style.display = "block";
+    if(item){
+        if (item.style.height === "0px") {
+            item.style.height = "120px"
             arrow.setAttribute("class", "rotated");
         } else {
-            item.style.display = "none";
+            item.style.height = "0px";
             arrow.setAttribute("class", "rotate-back");
         }
     }
@@ -38,26 +38,22 @@ function open(id: string, arrowid: string) {
 const FAQ: FC = () => {
     const [faq, setFaqs] = useState<questions[]>(faqData);
 
-
     return(
         <div className="md:flex RadicalBackground  w-full h-100vh mx-auto min-[320px]:px-3 md:px-3 lg:px-20 py-12">
             <div className='min-[320px]:m-auto md:m-1 min-[320px]:w-[350px] sm:w-[500px] md:w-full xl:w-screen justify-center align-middle'>
-
                 <Card type="opaque">
                     <div className=' min-[320px]:p-3 sm:p-8 md:p-5 align-middle'>
-                        <h1 className='text-white text-[39px] text-center font-HindMadurai lg:mx-20 mt-5'>Frequently asked questions</h1>
-                        <br/><br/>
+                            <h1 className='text-white text-[39px] text-center font-HindMadurai lg:mx-20 mt-5'>Frequently asked questions</h1>
+                            <br/><br/>
 
-                        <div className='flex-wrap grid-container justify-center lg:mx-10 mb-8'>
-                            {faq.map((q, index) => {
-                                return(
-                                    <Question question={q.question} answer={q.answer} index={index}/>
-                                )
-                            })}
-                        </div>
+                            <div className='flex-wrap grid-container justify-center lg:mx-10 mb-8'>
+                                {faq.map((q, index) => {
+                                    return(
+                                        <Question question={q.question} answer={q.answer} index={index}/>
+                                    )
+                                })}
+                            </div>
                     </div>
-
-                    
                 </Card>
             </div>
         </div>
@@ -70,19 +66,26 @@ type Props = {
     index: number;
 }
 
-const Question: FC<Props> = ({ question, answer, index }) => {
-    return (
+const Question: FC<Props> = ({question, answer, index}) => {
+    const st={
+        overflow:'hidden', 
+        transition:'0.5s', 
+        height:'0px'
+    };
+
+    return(
         <div className='mt-1 sm:mx-2 sm:px-2 md:mx-5 lg:mx-12 '>
             <div className='flex'>
-                <Image className='w-[12px] h-[20px] mr-2'
-                    src={vector}
-                    alt='arrow'
-                    id={`arrow+${index}`}
-                    onClick={() => open(`answer+${index}`, `arrow+${index}`)}
-                />
-                <h3 className='text-white font-HindMadurai text-[16px]'>{question}</h3>
+                <div onClick={() => open(`answer+${index}`, `arrow+${index}`)} className='flex cursor-pointer'>
+                    <Image className='w-[12px] h-[20px] mr-2'
+                        src={vector} 
+                        alt='arrow' 
+                        id={`arrow+${index}`} 
+                    /> 
+                    <h3 className='text-white font-HindMadurai text-[16px] hover:text-slate-300'>{question}</h3>
+                </div>
             </div>
-            <p className='text-[#c3c3c3] font-HindMadurai text-[16px] sm:w-[291px] my-3 ml-5' id={`answer+${index}`} style={{display:"none"}}>{answer}</p>
+            <p className='text-[#c3c3c3] font-HindMadurai text-[16px] sm:w-[291px] my-3 ml-5' id={`answer+${index}`} style={st}>{answer}</p>
         </div> 
     );
 };
