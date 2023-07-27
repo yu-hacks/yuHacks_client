@@ -9,15 +9,19 @@ import Card from '../common/Card.component'
 interface questions {
     question: string;
     answer: string;
+    id: number;
 }
 
 const faqData: questions[] = [
-    { question: 'What is yuHacks?', answer: 'yuHacks(2023) is the sixth iteration of this student-led event. Our goal is to provide a fun, inclusive, and growth-focused experience that prepares participants for their future tech careers.' },
-    { question: 'Who can participate?', answer: 'ans1' },
-    { question: 'What if I’ve never participated in a hackathon before?', answer: 'ans2' },
-    { question: 'What kind of activities will there be?', answer: 'ans3' },
-    { question: 'How many people can be on one team?', answer: 'ans4' },
-    { question: 'What if I am not in Ontario?', answer: 'ans5' }
+    { id:1, question: 'What is yuHacks?', answer: 'yuHacks(2023) is the sixth iteration of this student-led event. Our goal is to provide a fun, inclusive, and growth-focused experience that prepares participants for their future tech careers.' },
+    { id:2, question: 'Who can participate?', answer: 'ans1' },
+    { id:3, question: 'What if I’ve never participated in a hackathon before?', answer: 'ans2' },
+    
+]
+const faqData2: questions[] = [
+    { id:4, question: 'What kind of activities will there be?', answer: 'ans3' },
+    { id:5, question: 'How many people can be on one team?', answer: 'ans4' },
+    { id:6, question: 'What if I am not in Ontario?', answer: 'ans5' }
 ]
 
 function open (id : string, arrowid: string){
@@ -26,7 +30,7 @@ function open (id : string, arrowid: string){
 
     if(item){
         if (item.style.height === "0px") {
-            item.style.height = "120px"
+            item.style.height = "auto"
             arrow.setAttribute("class", "rotated");
         } else {
             item.style.height = "0px";
@@ -37,6 +41,7 @@ function open (id : string, arrowid: string){
 
 const FAQ: FC = () => {
     const [faq, setFaqs] = useState<questions[]>(faqData);
+    const [faq2, setFaqs2] = useState<questions[]>(faqData2);
 
     return(
         <div className="md:flex RadicalBackground  w-full h-100vh mx-auto min-[320px]:px-3 md:px-3 lg:px-20 py-12">
@@ -47,11 +52,21 @@ const FAQ: FC = () => {
                             <br/><br/>
 
                             <div className='flex-wrap grid-container justify-center lg:mx-10 mb-8'>
-                                {faq.map((q, index) => {
-                                    return(
-                                        <Question question={q.question} answer={q.answer} index={index}/>
-                                    )
-                                })}
+                                <div>
+                                    {faq.map((q, index) => {
+                                        return(
+                                            <Question question={q.question} answer={q.answer} id={q.id}/>
+                                        )
+                                    })}
+                                </div>
+                                <div>
+                                    {faq2.map((q, index) => {
+                                        return(
+                                            <Question question={q.question} answer={q.answer} id={q.id}/>
+                                        )
+                                    })}
+                                </div>
+                                
                             </div>
                     </div>
                 </Card>
@@ -63,10 +78,10 @@ const FAQ: FC = () => {
 type Props = {
     question: string;
     answer: string;
-    index: number;
+    id: number;
 }
 
-const Question: FC<Props> = ({question, answer, index}) => {
+const Question: FC<Props> = ({question, answer, id}) => {
     const st={
         overflow:'hidden', 
         transition:'0.5s', 
@@ -76,16 +91,16 @@ const Question: FC<Props> = ({question, answer, index}) => {
     return(
         <div className='mt-1 sm:mx-2 sm:px-2 md:mx-5 lg:mx-12 '>
             <div className='flex'>
-                <div onClick={() => open(`answer+${index}`, `arrow+${index}`)} className='flex cursor-pointer'>
+                <div onClick={() => open(`answer+${id}`, `arrow+${id}`)} className='flex cursor-pointer'>
                     <Image className='w-[12px] h-[20px] mr-2'
                         src={vector} 
                         alt='arrow' 
-                        id={`arrow+${index}`} 
+                        id={`arrow+${id}`} 
                     /> 
                     <h3 className='text-white font-HindMadurai text-[16px] hover:text-slate-300'>{question}</h3>
                 </div>
             </div>
-            <p className='text-[#c3c3c3] font-HindMadurai text-[16px] sm:w-[291px] my-3 ml-5' id={`answer+${index}`} style={st}>{answer}</p>
+            <p className='text-[#c3c3c3] font-HindMadurai text-[16px] sm:w-[291px] my-3 ml-5' id={`answer+${id}`} style={st}>{answer}</p>
         </div> 
     );
 };
