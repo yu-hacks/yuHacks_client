@@ -3,6 +3,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import HackerFormSection from "@/components/sections/HackerFormSection";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutPage2 from "@/pages/AboutPage2";
+import FaqSection from "@/components/sections/faqSection"
 
 export default function Home() {
   
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <AboutPage2/>
+      <FaqSection/>
       <HackerFormSection/>
     </main>
   )
