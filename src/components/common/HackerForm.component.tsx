@@ -78,14 +78,14 @@ export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
                     </label>
                 </fieldset>
                 <fieldset className={`flex justify-between mt-14`}>
-                    {!isHacker && <Button bgColor='bg-[#DE4F30]' color='text-white' type="reset" name="Reject" />}
+                    {!isHacker && <Button bg-Color='bg-[#DE4F30]' color='text-white' type="reset" name="Reject" />}
                     <div className={`flex justify-end ${isHacker && 'w-full'}`}>
                         <div className="mr-8">
-                            <Button bgColor='bg-transparent' color='text-black' type="reset" name="Clear" />
+                            <Button bg-Color='bg-transparent' color='text-black' type="reset" name="Clear" />
                         </div>
                         
                         <div className="mr-8"> 
-                            <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
+                            <Button bg-Color='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
                         </div>
                     </div>
                 </fieldset>

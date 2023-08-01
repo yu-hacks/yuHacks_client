@@ -152,7 +152,7 @@ const LoginRegistration = () => {
 
                         <div>
                             <button onClick={signUpView} className='sign-up text-black text' type="reset">Sign Up</button>
-                            <Button className='main-button' name={"Login"} type="submit"/> 
+                            <Button className='main-button' name="Login" type="submit"/> 
                         </div>
                     </form>
 
