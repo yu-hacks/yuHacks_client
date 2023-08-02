@@ -11,7 +11,7 @@ const About2Section = () => {
   return (
     <div 
       id="section-container"
-      className="flex w-full mx-auto px-3 lg:px-20 py-12"
+      className="flex w-full mx-auto px-3 lg:px-20 py-6"
     >
       <div
         id="section-background"
@@ -23,8 +23,10 @@ const About2Section = () => {
           <h3 className="font-medium text-[2rem] text-[#FDFDFD] mb-6 max-w-[360px]">Prototype, Program, Present Your Grand Ideas</h3>
           <p className="text-lg text-[#C3C3C3] max-w-[500px]">The Hackathon is a 36-hour event where you can prototype, program, and present your grand ideas. It is a place for you to meet new people, learn new things, and have fun. It is a place where you can be creative and innovative. It is a place where you can make your ideas come to life.</p>
         </div>
-        <div id="block about-2-media" className="flex h-full justify-center align-middle mt-8 md:mt-0 md:basis-1/3">
-          <Image src={wireframe} alt="" width={458} height={458}/>
+        <div id="about-2-media" className="flex h-full justify-center align-middle shrink-0 mt-8 md:mt-0 md:basis-1/3">
+          <div>
+            <Image src={wireframe} alt="" width={458} height={458}/>
+          </div>
           {/* TODO - Fix position of ChallengeCard in a div */}
           {/* <div className='absolute 2xl:w-[40%] 2xl:h-1/2 xl:h-[60%] lg:w-[60%] md:h-3/4 md:w-[40%] sm:h-1/2 h-2/3 w-[50%] sm:w-[44%]'>
             <ChallengeCard />
