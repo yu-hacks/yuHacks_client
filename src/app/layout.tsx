@@ -1,7 +1,7 @@
 // ATTENTION
 // ============
 // DO NOT CHANGE ANYTHING IN THIS FILE, THANK YOU!
-'use client'
+// 'use client'
 import { ApolloProvider } from '@apollo/client'
 import './globals.css'
 import { client } from '@/utils/apolloClient';
@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-[#202020]`}>
-        <ApolloClientProvider children={children} />
+        {/* <ApolloClientProvider children={children} /> */}
         {/* DO NOT DELETE!!! */}
-        
+        {children}
       </body>
     </html>
   )

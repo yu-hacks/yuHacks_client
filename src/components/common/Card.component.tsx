@@ -1,6 +1,5 @@
-"use client"
-import React, { FC, useEffect} from 'react';
-import { PropsWithChildren } from 'react';
+// "use client"
+import React, { FC, PropsWithChildren } from 'react';
 
 type Props = {
   type?: 'opaque' | 'outline';
