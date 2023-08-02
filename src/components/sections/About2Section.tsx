@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Card from "../common/Card.component";
-import ChallengeCard from "../common/ChallengeCard.component";
+// import ChallengeCard from "../common/ChallengeCard.component";
 
+//
 import wireframe from "@/public/images/about-2-media.png";
 import arrow from "@/public/images/blue-arrow.png";
 
@@ -23,7 +23,7 @@ const About2Section = () => {
           <h3 className="font-medium text-[2rem] text-[#FDFDFD] mb-6 max-w-[360px]">Prototype, Program, Present Your Grand Ideas</h3>
           <p className="text-lg text-[#C3C3C3] max-w-[500px]">The Hackathon is a 36-hour event where you can prototype, program, and present your grand ideas. It is a place for you to meet new people, learn new things, and have fun. It is a place where you can be creative and innovative. It is a place where you can make your ideas come to life.</p>
         </div>
-        <div id="about-2-media" className="flex h-full justify-center align-middle shrink-0 mt-8 md:mt-0 md:basis-1/3">
+        <div id="about-2-media" className="flex h-full justify-center align-middle shrink-0 mt-8 md:mt-0">
           <div>
             <Image src={wireframe} alt="" width={458} height={458}/>
           </div>

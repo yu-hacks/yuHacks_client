@@ -5,6 +5,7 @@ import HeroSection from "@/components/sections/HeroSection";
 // import AboutPage2 from "@/pages/AboutPage2";
 import FaqSection from "@/components/sections/faqSection"
 import About2Section from "@/components/sections/About2Section";
+import SponsorSection from "@/components/sections/SponsorSection";
 
 export default function Home() {
   
@@ -14,8 +15,10 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       {/* <AboutPage2/> */}
-      <About2Section/>
+      <About2Section />
+      <SponsorSection />
       <FaqSection/>
+
       {/* <HackerFormSection/> */}
     </main>
   )
