@@ -4,6 +4,7 @@ import Image from "next/image";
 // ASSETS
 import arrow from "@/public/images/yellow-arrow.png";
 import sponsorGraphics from "@/public/images/sponsor-graphics.png";
+import Button from "../common/Button.component";
 
 const SponsorSection: FC = () => {
   return (
@@ -15,7 +16,7 @@ const SponsorSection: FC = () => {
         id="section-background"
         className="flex flex-col md:flex-row w-full mx-auto bg-white/[0.13] rounded-3xl"
       >
-        <div id="sponsor-media" className="flex justify-center align-middle shrink-0">
+        <div id="sponsor-media" className="flex justify-center align-middle shrink-0 md:mt-0 md:basis-1/3">
           <div>
             <Image src={sponsorGraphics} alt="" width={458} height={458}/>
           </div>
@@ -29,6 +30,14 @@ const SponsorSection: FC = () => {
           <h3 className="font-medium text-[2rem] text-[#FDFDFD] mb-6 max-w-[450px]">Sponsor, Support, Supercharge a New Possibility</h3>
           <p className="text-lg text-[#C3C3C3] max-w-[500px]">The Hackathon is a 36-hour event where you can prototype, program, and present your grand ideas. It is a place for you to meet new people, learn new things, and have fun. It is a place where you can be creative and innovative. It is a place where you can make your ideas come to life.</p>
           {/* TODO - Add Sponsor Us button*/}
+          <div id="button-wrapper" className="w-max mt-6">
+            <a 
+              href="mailto:sponsorship@yuhacks.ca"
+              className="text-[#F1C480] text-lg font-medium hover:underline"
+            >
+              Interested in Sponsoring?
+            </a>
+          </div>
         </div>
       </div>
     </div>

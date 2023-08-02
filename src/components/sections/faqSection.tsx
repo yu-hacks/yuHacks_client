@@ -22,7 +22,7 @@ const faqData: questions[] = [
   { id: 2, question: "Who can participate?", answer: "ans1" },
   {
     id: 3,
-    question: "What if I&apos;ve never participated in a hackathon before?",
+    question: "What if I have never participated in a hackathon before?",
     answer: "ans2",
   },
 ];
@@ -61,7 +61,7 @@ const FAQ: FC = () => {
         className="flex flex-col md:flex-row w-full mx-auto bg-white/[0.13] rounded-3xl"
       >  
           <div className=" min-[320px]:p-3 sm:p-8 md:p-5 align-middle">
-            <h1 className="text-white text-[39px] text-center font-HindMadurai lg:mx-20 mt-5">
+            <h1 className="text-[#FDFDFD] text-4xl font-medium text-center lg:mx-20 mt-5">
               Frequently asked questions
             </h1>
             <br />
@@ -115,21 +115,23 @@ const Question: FC<Props> = ({ question, answer, id }) => {
       <div className="flex">
         <div
           onClick={() => open(`answer+${id}`, `arrow+${id}`)}
-          className="flex cursor-pointer"
+          className="flex flex-row cursor-pointer justify-center"
         >
-          <Image
-            className="w-[12px] h-[20px] mr-2"
-            src={vector}
-            alt="arrow"
-            id={`arrow+${id}`}
-          />
-          <h4 className="text-white font-HindMadurai text-xl hover:text-slate-300">
+          <div className="shrink-0">
+            <Image
+              className="w-[12px] h-[20px] mr-2"
+              src={vector}
+              alt="arrow"
+              id={`arrow+${id}`}
+            />
+          </div>
+          <h4 className="text-white font-HindMadurai text-xl hover:text-[#DF9A9A]">
             {question}
           </h4>
         </div>
       </div>
       <p
-        className="text-[#c3c3c3] font-HindMadurai text-lg sm:w-[291px] my-3 ml-5"
+        className="text-[#c3c3c3] font-HindMadurai text- sm:w-[291px] my-3 ml-5"
         id={`answer+${id}`}
         style={st}
       >
