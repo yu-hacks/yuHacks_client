@@ -9,28 +9,28 @@ import Navbar from "./Navbar";
 
 // ASSETS
 import RedHackerCard from "@/public/images/RedCard.png";
-import Yuhacks2023 from "@/public/images/yuhacks2023.png";
+import logoTextOnly from "@/public/images/yuhacks-logo-text-only.png";
 // import Menu from "@/public/images/coming-soon-page/Menu.png";
 
 const HeroSection: FC = () => {
   return (
     <>
-      <div className="RadicalBackground relative  w-full h-100vh bg-gradient-to-b from-[#303030] to-[#202020]">
+      <div className="w-full h-100vh bg-gradient-to-b from-[#303030] to-[#202020]">
         <Navbar />
 
         {/* HERO CONTENT */}
         <div 
-          className="DotBackground flex flex-col items-center justify-center mx-4"
+          className="flex flex-col items-center justify-center mx-4"
           style={{
             backgroundSize: "1.75em 1.75em",
             backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.05) 2.5px, rgba(255, 255, 255, 0) 2.5px)"
           }}
         >
-          <Image src={Yuhacks2023} alt="My Image" width={237} height={44} className="mt-6"/>
-          <div className="YorkUniversitySPremiereHackathon pt-4 text-center text-neutral-50 text-[39px] lg:text-[49px] sm:text-[39px] font-semibold leading-[54px]">
+          <Image src={logoTextOnly} alt="My Image" width={214} height={44} className="my-8"/>
+          <div className="text-center text-neutral-50 text-[39px] lg:text-[49px] sm:text-[39px] font-semibold leading-[54px]">
             York University&apos;s Premiere Hackathon
           </div>
-          <div className="InPersonEventSeptember29October1 mx-8 mt1 text-center  ">
+          <div className="mx-8 mt1 text-center  ">
             <span className="text-[#A5A5A5] text-[20px] font-semibold">
               In-person Event{" "}
             </span>

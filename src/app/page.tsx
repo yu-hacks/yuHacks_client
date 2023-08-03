@@ -3,6 +3,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import FaqSection from "@/components/sections/faqSection"
 import About2Section from "@/components/sections/About2Section";
 import SponsorSection from "@/components/sections/SponsorSection";
+import FooterSection from "@/components/sections/FooterSection";
 
 export default function Home() {
   
@@ -15,7 +16,7 @@ export default function Home() {
       <About2Section />
       <SponsorSection />
       <FaqSection/>
-
+      <FooterSection/>
       {/* <HackerFormSection/> */}
     </main>
   )
