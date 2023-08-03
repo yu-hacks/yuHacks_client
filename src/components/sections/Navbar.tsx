@@ -60,27 +60,27 @@ const Navbar: FC = () => {
             />
           </div> */}
           {
-            getTokenFromStorage() && validateToken(getTokenFromStorage()) ? (
-              <Link
-                href="/login"
-                passHref
-                onClick={() => {
-                  localStorage.removeItem("token");
-                  console.log(getTokenFromStorage());
-                }}
-              >
-                <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:hidden md:block lg:block text-base font-medium hover:opacity-60">
-                  Log Out
-                </div>
-              </Link>
-            ) : (
-              <Link href="/">
-                <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:hidden md:block lg:block text-base font-medium hover:opacity-60">
-                  {/* Log In */}
-                  Dashboard
-                </div>
-              </Link>
-            )
+            // getTokenFromStorage() && validateToken(getTokenFromStorage()) ? (
+            //   <Link
+            //     href="/login"
+            //     passHref
+            //     onClick={() => {
+            //       localStorage.removeItem("token");
+            //       console.log(getTokenFromStorage());
+            //     }}
+            //   >
+            //     <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:hidden md:block lg:block text-base font-medium hover:opacity-60">
+            //       Log Out
+            //     </div>
+            //   </Link>
+            // ) : (
+            //   <Link href="/">
+            //     <div className="Portal mt-1 pl-4 pr-4 text-right text-[#A14545] hidden sm:hidden md:block lg:block text-base font-medium hover:opacity-60">
+            //       {/* Log In */}
+            //       Dashboard
+            //     </div>
+            //   </Link>
+            // )
           }
 
           {/* <div className="Ellipse5  w-8 h-8 bg-white bg-opacity-30 rounded-full hidden sm:hidden md:block lg:block border border-neutral-800 border-opacity-40" /> */}
