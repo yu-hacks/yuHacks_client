@@ -14,9 +14,9 @@ interface CardType {
 }
 
 const cardData: CardType[] = [
-    { id: 1, deg: '13.415deg', bottom: '-16rem', right: '-19rem', text: 'Hello' },
-    { id: 2, deg: '3.915deg', bottom: '13rem', right: '-14rem', text: 'Hi' },
-    { id: 3, deg: '-3.958deg', bottom: '42rem', right: '-8rem', text: 'We are a multi-disciplinary event that aims to bring people of all backgrounds...' },]
+    { id: 1, deg: '13.5deg', bottom: '-16rem', right: '-19rem', text: 'Hello' },
+    { id: 2, deg: '4deg', bottom: '13rem', right: '-14rem', text: 'Hi' },
+    { id: 3, deg: '-4deg', bottom: '42rem', right: '-8rem', text: 'We are a multi-disciplinary event that aims to bring people of all backgrounds...' },]
 
 
 const ChallengeCard: FC = () => {
@@ -42,9 +42,9 @@ const ChallengeCard: FC = () => {
                     secondCard = updatedCards[1];
                     break;
             }
-            updatedCards[0] = { ...cardToMove!, deg: '13.415deg', bottom: '-16rem', right: '-19rem' };
-            updatedCards[1] = { ...firstCard!, deg: '3.915deg', bottom: '13rem', right: '-14rem' };
-            updatedCards[2] = { ...secondCard!, deg: '-3.958deg', bottom: '42rem', right: '-8rem' };
+            updatedCards[0] = { ...cardToMove!, deg: '-4deg', bottom: '-16rem', right: '-19rem' };
+            updatedCards[1] = { ...firstCard!, deg: '4deg', bottom: '13rem', right: '-14rem' };
+            updatedCards[2] = { ...secondCard!, deg: '-13.5deg', bottom: '42rem', right: '-8rem' };
             return updatedCards;
         });
     };
@@ -94,7 +94,7 @@ const Card: FC<Props> = ({ deg, index, text, right, bottom, handleClick }) => {
     return (
         <motion.div
             className={`absolute rounded-lg inset-0
-            shadow-md xl:w-72 xl:h-[400px] md:w-60 md:h-[380px] w-44 h-[250px] bg-[#FEFFFC] flex items-center`}
+            shadow-md xl:w-72 xl:h-[400px] md:w-60 md:h-[380px] w-44 h-[250px] bg-white/[0.55] backdrop-blur-[18px] flex items-center`}
             style={{
                 // right: `${right}`,
                 // bottom: `${bottom}`,
@@ -109,8 +109,9 @@ const Card: FC<Props> = ({ deg, index, text, right, bottom, handleClick }) => {
             dragConstraints={{ left: 0, right: 0 }}
         >
 
-
-            <div className='h-[90%] w-5/6 mx-auto border-t-[3px] border-b-[3px] border-t-[#c95656] border-b-[#58A0D4] border-opacity-75'>
+            <div className='h-[90%] w-5/6 mx-auto'>
+            </div>
+            {/* <div className='h-[90%] w-5/6 mx-auto border-t-[3px] border-b-[3px] border-t-[#c95656] border-b-[#58A0D4] border-opacity-75'>
                 <Image src={bugImg} alt={'bug'} className='xl:w-28 xl:h-28 md:w-16 md:h-16 w-10 h-10 mx-auto md:my-10 my-5' />
                 <div className="flex flex-col w-5/6 mx-auto my-5 font-HindMadurai text-center text-black md:text-xl text-sm">
                     Bug-hunting challenge
@@ -118,7 +119,7 @@ const Card: FC<Props> = ({ deg, index, text, right, bottom, handleClick }) => {
                 <div className="flex flex-col w-[90%] mx-auto font-Inconsolata text-center text-black text-opacity-50 md:text-[14px] text-xs leading-none">
                     {text}
                 </div>
-            </div>
+            </div> */}
         </motion.div>
     );
 };

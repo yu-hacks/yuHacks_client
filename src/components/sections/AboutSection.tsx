@@ -1,9 +1,7 @@
-// "use client";
-import Card from "@/components/common/Card.component";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 import "../../styles/AboutPage1.css";
-import vector from "@/public/images/Vector.png";
+import arrow from "@/public/images/Vector.png";
 import country from "@/public/images/country.png";
 import img9 from "@/public/images/9.png";
 import img59 from "@/public/images/59.png";
@@ -11,85 +9,75 @@ import imgdec from "@/public/images/56.3.png";
 import school from "@/public/images/School.png";
 import major from "@/public/images/major.png";
 
-const AboutPage1: FC = () => {
+const AboutSection: FC = () => {
   return (
-    <div className="md:flex RadicalBackground  w-full h-100vh mx-auto min-[320px]:px-3 md:px-3 lg:px-20 py-12">
-      <div className="min-[320px]:m-auto md:m-1  sm:w-[500px] md:w-screen md:mr-5 justify-center align-middle">
-        <Card type="opaque">
-          <div className="h-[500px] min-[320px]:p-3 sm:p-8 md:p-5 align-middle">
-            <Image src={vector} alt="vector" className=" " />{" "}
-            {/* ml-11 mt-9 mb-2*/}
-            <br />
-            <h3 className="text-white min-[200px]:text-[28px] md:text-[28px] lg:text-[31px] font-HindMadurai ">
-              {/*ml-11 mr-96  mb-1*/}
-              Join us for an exciting 36-{"\n"}
-              hour adventure
-            </h3>
-            <br />
-            <p className="text-[#c3c3c3]  min-[200px]:text-[15px] md:text-[18.5px]  lg:mr-20 font-HindMadurai">
-              Welcome to yuHacks 2023! York University&apos;s premier 36-hour
-              hackathon! This September, join 250 innovative and creative
-              developers, designers, and creators to unite and unleash their
-              creativity, collaborating on cutting-edge projects and explore new
-              possibilities!
-            </p>
-            {/*ml-11 mr-36 mb-[118px]*/}
-          </div>
-        </Card>
+    <div
+      id="about-container"
+      className="flex flex-col md:flex-row md:flex w-full mx-auto px-3 lg:px-20 py-6"
+    >
+      <div
+        id="about-text-background"
+        className="flex flex-col w-full mx-auto bg-white/[0.13] rounded-3xl  md:basis-2/3 lg:basis-3/4 md:mr-6"
+      >
+        <div id="about-text-container" className="px-8 py-12 lg:p-16">
+          <Image src={arrow} alt="" className="mb-4" />
+          <h3 className="font-semibold text-4xl text-[#EFCCCC] mb-10 max-w-[450px]">
+            Create, Connect, Code in a 36-Hour Adventure
+          </h3>
+          <p className="text-lg text-[#C3C3C3] max-w-[500px]">
+            Welcome to yuHacks 2023, York University&apos;s premier 36-hour
+            hackathon! This fall, join 250 innovative and creative developers,
+            designers, and creators to unite and unleash their creativity,
+            collaborating on cutting-edge projects and explore new
+            possibilities!
+          </p>
+        </div>
       </div>
-      <br />
-
-      <div className="min-[320px]:m-auto md:m-1  sm:w-[500px]  lg:mx-2">
-        <Card type="opaque">
-          <div className="h-[500px] min-[320px]:p-3 sm:p-9 md:p-3 align-middle">
-            <h3 className=" text-[24px] text-[#c3c3c3] mx-3">
-              Statistics from out last Hackathon
-            </h3>
-            <br />
-
-            <div className=" items-center mx-3">
-              <div>
-                <div className="items-center flex">
-                  <Image src={country} alt="country" className="mr-4" />
-                  <div className="">
-                    <Image src={img9} alt="9" />
-
-                    <p className="text-[#717171] text-[20px] font-HindMadurai mt-3">
-                      Countries
-                    </p>
-                  </div>
-                </div>
-                <br />
-
-                <div className="items-center flex">
-                  <Image src={school} alt="school" className="mr-4 h-[40px]" />
-                  <div className="">
-                    <Image src={img59} alt="59" />
-
-                    <p className="text-[#717171] text-[20px] font-HindMadurai mt-3">
-                      Schools from around the world
-                    </p>
-                  </div>
-                </div>
-                <br />
-
-                <div className="items-center flex">
-                  <Image src={major} alt="major" className="mr-4" />
-                  <div className="">
-                    <Image src={imgdec} alt="56.3%" />
-
-                    <p className="text-[#717171] text-[20px] font-HindMadurai mt-3">
-                      CS Major
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <div
+        id="about-stats-background"
+        className="flex flex-col md:flex-row w-full mx-auto bg-white/[0.13] rounded-3xl mt-6 md:mt-0 md:basis-1/3 lg:basis-1/4"
+      >
+        <div id="stats-text-container" className="flex flex-col justify-start align-start px-8 py-12">
+          <h4 className="text-[1.25rem] text-[#717171] font-semibold mb-6">
+            Statistics from yuHacks 2022
+          </h4>
+          <div id="stats-country" className="flex flex-row mb-6">
+            <div className="pr-4 shrink-0">
+              <Image src={country} alt="country icon" width={40} height={40}/>
+            </div>
+            <div>
+              <Image src={img9} alt=""/>
+              <p className="text-[#717171] text-md font-HindMadurai mt-3">
+                Countries
+              </p>
             </div>
           </div>
-        </Card>
+          <div id="stats-schools" className="flex flex-row mb-6">
+            <div className="pr-4 shrink-0">
+              <Image src={school} alt="country icon" width={40} height={40}/>
+            </div>
+            <div>
+              <Image src={img59} alt="" />
+              <p className="text-[#717171] text-md font-HindMadurai mt-3">
+                Schools around the world
+              </p>
+            </div>
+          </div>
+          <div id="stats-majors" className="flex flex-row">
+            <div className="pr-4 shrink-0">
+              <Image src={major} alt="country icon" width={40} height={40}/>
+            </div>
+            <div>
+              <Image src={imgdec} alt="" />
+              <p className="text-[#717171] text-md font-HindMadurai mt-3">
+                Countries
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default AboutPage1;
+export default AboutSection;

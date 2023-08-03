@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
+
 import linkedin from '@/public/images/LinkedIn.png';
 import instagram from '@/public/images/Instagram.png';
-import twitter from '@/public/images/Twitter.png';
-import tiktok from '@/public/images/TikTok.png';
-import PropTypes from 'prop-types';
+import threads from '@/public/images/threads.png';
 
 interface SocialsProps {
   isDarkMode?: boolean;
@@ -16,21 +16,21 @@ const Socials: FC<SocialsProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <div className='flex justify-center items-center' style={socStyle}>
-      <ul className="h-10 list-none w-48 flex justify-between">
+    <div className='flex items-center justify-end' style={socStyle}>
+      <ul className="h-10 list-none flex justify-between">
         <li> 
-          <a href="/">
-            <Image src={linkedin} className={`hover:opacity-60 w-9 h-9`} alt={'linkedin'} />
+          <a href="https://www.linkedin.com/company/yuhacks/" target="_blank">
+            <Image src={linkedin} className={`mx-2`} alt={'linkedin logo'} />
           </a>
         </li>
         <li>
-          <a href="/">
-            <Image src={instagram} className="hover:opacity-60 w-9 h-9" alt={'instagram'} />
+          <a href="https://www.instagram.com/yuhacks/" target="_blank">
+            <Image src={instagram} className="mx-2" alt={'instagram logo'} />
           </a>
         </li>
         <li>
-          <a href="/">
-            <Image src={twitter} className="hover:opacity-60 w-9 h-9" alt={'twitter'} />
+          <a href="https://www.threads.net/@yuhacks" target="_blank">
+            <Image src={threads} className="mx-2" alt={'threads logo'} />
           </a>
         </li>
       </ul>

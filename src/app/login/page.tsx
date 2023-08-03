@@ -1,4 +1,5 @@
 "use client"
+import React from 'react';
 import yuHacks2023Arrow from '@/public/images/yuHacks2023Arrow.png';
 import HackerCardLogin from '@/public/images/HackerCardLogin.png';
 import { useQuery, gql, useMutation } from '@apollo/client'
@@ -10,6 +11,7 @@ import AccentedButton from '@/components/common/AccentedButton.component';
 import { useRouter } from 'next/navigation';
 import jwt_decode from 'jwt-decode';
 import validateToken, {getTokenFromStorage, setTokenInStorage} from '@/utils/token-auth';
+import RootLayout from '../layout';
 
 
 const LOGIN_MUTATION = gql`
@@ -190,6 +192,7 @@ const LoginPage: FC= () => {
   };
 
   return (
+    <RootLayout>
     <div className="DashboardLoginDesktop w-screen h-screen bg-neutral-100">
       <div className="Logo w-[155px] h-[30px] pt-8 ml-4 sm:ml-4 md:ml-12 lg:ml-12" >
         <Image src={yuHacks2023Arrow} alt="My Image" width={152} height={27} />
@@ -270,7 +273,7 @@ const LoginPage: FC= () => {
 
 
     </div>
-
+    </RootLayout>
   )
 }
 

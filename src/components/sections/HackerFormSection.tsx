@@ -3,7 +3,7 @@ import SideBar from '../common/SideBar.component';
 import { HackerForm } from '../common/HackerForm.component';
 
 
-const App = () => {
+const HackerFormSection = () => {
     return (
     <div className="grid grid-cols-12 h-screen">
       <div className="col-span-2">
@@ -16,4 +16,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default HackerFormSection;

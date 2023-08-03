@@ -1,6 +1,6 @@
 import { SvgIconTypeMap } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
-import React, { FC } from 'react'
+import React, { FC, MouseEventHandler } from 'react'
 import {FcGoogle} from 'react-icons/fc'
 
 interface Props {
@@ -9,6 +9,8 @@ interface Props {
   id?: string;
   colour? : string;
   fontcolour?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  className?: string;
 }
 const Button: FC<Props> = ({name, type, id, colour, fontcolour}) => {
 
