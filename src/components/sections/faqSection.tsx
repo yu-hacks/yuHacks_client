@@ -61,7 +61,7 @@ const FAQ: FC = () => {
         className="flex flex-col md:flex-row w-full mx-auto bg-white/[0.13] rounded-3xl"
       >  
           <div className=" min-[320px]:p-3 sm:p-8 md:p-5 align-middle">
-            <h1 className="text-[#FDFDFD] text-4xl font-medium text-center lg:mx-20 mt-5">
+            <h1 className="text-[#EFCCCC] text-4xl font-semibold text-center lg:mx-20 mt-5">
               Frequently asked questions
             </h1>
             <br />

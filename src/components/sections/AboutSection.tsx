@@ -21,7 +21,7 @@ const AboutSection: FC = () => {
       >
         <div id="about-text-container" className="px-8 py-12 lg:p-16">
           <Image src={arrow} alt="" className="mb-4" />
-          <h3 className="font-medium text-[2rem] text-[#FDFDFD] mb-6 max-w-[360px]">
+          <h3 className="font-semibold text-4xl text-[#EFCCCC] mb-10 max-w-[450px]">
             Create, Connect, Code in a 36-Hour Adventure
           </h3>
           <p className="text-lg text-[#C3C3C3] max-w-[500px]">
@@ -38,7 +38,7 @@ const AboutSection: FC = () => {
         className="flex flex-col md:flex-row w-full mx-auto bg-white/[0.13] rounded-3xl mt-6 md:mt-0 md:basis-1/3 lg:basis-1/4"
       >
         <div id="stats-text-container" className="flex flex-col justify-start align-start px-8 py-12">
-          <h4 className="text-[1.25rem] text-[#717171] mb-6">
+          <h4 className="text-[1.25rem] text-[#717171] font-semibold mb-6">
             Statistics from yuHacks 2022
           </h4>
           <div id="stats-country" className="flex flex-row mb-6">
