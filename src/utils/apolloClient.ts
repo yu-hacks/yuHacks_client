@@ -1,6 +1,23 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
+import { useMemo } from "react";
 
-export const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql', // replace with your GraphQL server URI
-  cache: new InMemoryCache(),
-});
+const createApolloClient = () => {
+  return new ApolloClient({
+    link: new HttpLink({
+      uri: "http://localhost:5000/graphql",
+      credentials: "same-origin",
+    }),
+    cache: new InMemoryCache(),
+    defaultOptions: {
+      watchQuery: {
+        fetchPolicy: "cache-and-network",
+      },
+    },
+  });
+};
+
+const client = createApolloClient();
+
+export function useApollo() {
+  return client;
+}
