@@ -75,6 +75,7 @@ const FAQ: FC = () => {
                       question={q.question}
                       answer={q.answer}
                       id={q.id}
+                      key={q.id}
                     />
                   );
                 })}
@@ -86,6 +87,7 @@ const FAQ: FC = () => {
                       question={q.question}
                       answer={q.answer}
                       id={q.id}
+                      key={q.id}
                     />
                   );
                 })}
