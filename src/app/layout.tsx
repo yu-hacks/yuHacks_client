@@ -11,10 +11,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   const client = useApollo();
   return (
-    <ApolloProvider client={client}>
+    
       <div className={`bg-[#202020]`}>
         {children}
       </div>
-    </ApolloProvider>
+    
   );
 }
