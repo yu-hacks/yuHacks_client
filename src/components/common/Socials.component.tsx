@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
+
 import linkedin from '@/public/images/LinkedIn.png';
 import instagram from '@/public/images/Instagram.png';
 import twitter from '@/public/images/Twitter.png';
-import tiktok from '@/public/images/TikTok.png';
-import PropTypes from 'prop-types';
 
 interface SocialsProps {
   isDarkMode?: boolean;
@@ -16,21 +16,21 @@ const Socials: FC<SocialsProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <div className='flex justify-center items-center' style={socStyle}>
-      <ul className="h-10 list-none w-48 flex justify-between">
+    <div className='flex items-center justify-end' style={socStyle}>
+      <ul className="h-10 list-none flex justify-between">
         <li> 
           <a href="/">
-            <Image src={linkedin} className={`hover:opacity-60 w-9 h-9`} alt={'linkedin'} />
+            <Image src={linkedin} className={`mx-2`} alt={'linkedin'} />
           </a>
         </li>
         <li>
           <a href="/">
-            <Image src={instagram} className="hover:opacity-60 w-9 h-9" alt={'instagram'} />
+            <Image src={instagram} className="mx-2" alt={'instagram'} />
           </a>
         </li>
         <li>
           <a href="/">
-            <Image src={twitter} className="hover:opacity-60 w-9 h-9" alt={'twitter'} />
+            <Image src={twitter} className="mx-2" alt={'twitter'} />
           </a>
         </li>
       </ul>
