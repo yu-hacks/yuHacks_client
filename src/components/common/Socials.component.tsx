@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import linkedin from '@/public/images/LinkedIn.png';
 import instagram from '@/public/images/Instagram.png';
-import twitter from '@/public/images/Twitter.png';
+import threads from '@/public/images/threads.png';
 
 interface SocialsProps {
   isDarkMode?: boolean;
@@ -19,18 +19,18 @@ const Socials: FC<SocialsProps> = ({ isDarkMode }) => {
     <div className='flex items-center justify-end' style={socStyle}>
       <ul className="h-10 list-none flex justify-between">
         <li> 
-          <a href="/">
-            <Image src={linkedin} className={`mx-2`} alt={'linkedin'} />
+          <a href="https://www.linkedin.com/company/yuhacks/" target="_blank">
+            <Image src={linkedin} className={`mx-2`} alt={'linkedin logo'} />
           </a>
         </li>
         <li>
-          <a href="/">
-            <Image src={instagram} className="mx-2" alt={'instagram'} />
+          <a href="https://www.instagram.com/yuhacks/" target="_blank">
+            <Image src={instagram} className="mx-2" alt={'instagram logo'} />
           </a>
         </li>
         <li>
-          <a href="/">
-            <Image src={twitter} className="mx-2" alt={'twitter'} />
+          <a href="https://www.threads.net/@yuhacks" target="_blank">
+            <Image src={threads} className="mx-2" alt={'threads logo'} />
           </a>
         </li>
       </ul>

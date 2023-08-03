@@ -27,15 +27,15 @@ const HeroSection: FC = () => {
           }}
         >
           <Image src={logoTextOnly} alt="My Image" width={214} height={44} className="my-8"/>
-          <div className="text-center text-neutral-50 text-[39px] lg:text-[49px] sm:text-[39px] font-semibold leading-[54px]">
+          <div className="text-center text-[#EFCCCC] text-[39px] lg:text-[49px] sm:text-[39px] font-semibold leading-[54px]">
             York University&apos;s Premiere Hackathon
           </div>
           <div className="mx-8 mt1 text-center  ">
-            <span className="text-[#A5A5A5] text-[20px] font-semibold">
+            <span className="text-[#DF9A9A] text-[20px] font-semibold">
               In-person Event{" "}
             </span>
-            <span className="text-[#C95656] text-[26px] font-bold">•</span>
-            <span className="text-[#A5A5A5] text-[20px] font-regular">
+            <span className="text-[#767676] text-[26px] font-bold">•</span>
+            <span className="text-[#DF9A9A] text-[20px] font-regular">
               {" "}
               Coming this Fall
             </span>
