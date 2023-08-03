@@ -1,8 +1,5 @@
-// import { HackerForm } from "@/components/common/HackerForm.component";
 import AboutSection from "@/components/sections/AboutSection";
-// import HackerFormSection from "@/components/sections/HackerFormSection";
 import HeroSection from "@/components/sections/HeroSection";
-// import AboutPage2 from "@/pages/AboutPage2";
 import FaqSection from "@/components/sections/faqSection"
 import About2Section from "@/components/sections/About2Section";
 import SponsorSection from "@/components/sections/SponsorSection";
