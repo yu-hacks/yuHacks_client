@@ -78,14 +78,14 @@ export const HackerForm: FC<HackerFormProps> = ({ isHacker }) => {
                     </label>
                 </fieldset>
                 <fieldset className={`flex justify-between mt-14`}>
-                    {!isHacker && <Button bgColor='bg-[#DE4F30]' color='text-white' type="reset" name="Reject" />}
+                    {!isHacker && <Button bgColor='bg-[#DE4F30]' colour='text-white' type="reset" name="Reject" />}
                     <div className={`flex justify-end ${isHacker && 'w-full'}`}>
                         <div className="mr-8">
-                            <Button bgColor='bg-transparent' color='text-black' type="reset" name="Clear" />
+                            <Button bgColor='bg-transparent' colour='text-black' type="reset" name="Clear" />
                         </div>
                         
                         <div className="mr-8"> 
-                            <Button bgColor='bg-[#4F4F4F]' color='text-white' type="submit" name="Submit" />
+                            <Button bgColor='bg-[#4F4F4F]' colour='text-white' type="submit" name="Submit" />
                         </div>
                     </div>
                 </fieldset>
@@ -169,7 +169,7 @@ const FileDragDrop: FC = () => {
             onDragLeave={handleDragLeave}
             className={`font-HindMadurai sm:text-lg text-base cursor-pointer w-auto h-24 flex items-center justify-center flex-col flex-nowrap text-[#555555] border-2 border-[rgb(0,0,0)] border-opacity-[0.35] rounded-lg ${isDragging ? '' : 'border-dashed'}`}
         >
-            {uploadedFile ? <Button onClick={handleButtonClick} bgColor='bg-[#4F4F4F]' color='text-white' Icon={DownloadIcon} name={`${uploadedFile.name}`} /> : "Click or drag and drop your resume here"}
+            {uploadedFile ? <Button onClick={handleButtonClick} bgColor='bg-[#4F4F4F]' colour='text-white' name={`${uploadedFile.name}`} /> : "Click or drag and drop your resume here"}
         </div>
     )
 }

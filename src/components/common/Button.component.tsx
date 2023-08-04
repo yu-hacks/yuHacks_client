@@ -9,6 +9,9 @@ interface Props {
   id?: string;
   colour? : string;
   fontcolour?: string;
+  className?: string;  // added to avoid build error. TODO - remove when HackerForm is fixed
+  bgColor?: string;    // added to avoid build error. TODO - remove when HackerForm is fixed
+  onClick?: () => void; // added to avoid build error. TODO - remove when HackerForm is fixed
 }
 const Button: FC<Props> = ({name, type, id, colour, fontcolour}) => {
 

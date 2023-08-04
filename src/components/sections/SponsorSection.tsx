@@ -28,7 +28,7 @@ const SponsorSection: FC = () => {
         <div id="sponsor-text" className="mx-8 my-12 lg:m-16 lg:pl-8">
           <Image src={arrow} alt="" className="mb-4" />
           <h3 className="font-semibold text-4xl text-[#F8E1BF] mb-10 max-w-[500px]">Sponsor, Support, Supercharge a New Possibility</h3>
-          <p className="text-lg text-[#C3C3C3] max-w-[500px]">The Hackathon is a 36-hour event where you can prototype, program, and present your grand ideas. It is a place for you to meet new people, learn new things, and have fun. It is a place where you can be creative and innovative. It is a place where you can make your ideas come to life.</p>
+          <p className="text-lg text-[#C3C3C3] max-w-[500px]">It is a place where you can be creative and innovative. It is a place where you can make your ideas come to life.</p>
           {/* TODO - Add Sponsor Us button*/}
           <div id="button-wrapper" className="w-max mt-6">
             <a 

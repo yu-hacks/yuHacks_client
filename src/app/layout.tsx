@@ -12,7 +12,7 @@ export const metadata = {
   description: 'yuHacks is the premiere hackathon at York University.',
 }
 
-export function ApolloClientProvider({ children }: { children: React.ReactNode }) {
+function ApolloClientProvider({ children }: { children: React.ReactNode }) {
   return (
     <ApolloProvider client={client}>
       {children}
