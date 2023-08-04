@@ -53,11 +53,11 @@ const FAQ: FC = () => {
 
   return (
     <div 
-      id="section-container"
+      id="faq-container"
       className="flex w-full mx-auto px-3 lg:px-20 py-6"
     >
       <div 
-        id="section-background"
+        id="faq-background"
         className="flex flex-col md:flex-row w-full mx-auto bg-white/[0.13] rounded-3xl"
       >  
           <div className=" min-[320px]:p-3 sm:p-8 md:p-5 align-middle">

@@ -26,19 +26,19 @@ const Navbar: FC = () => {
             />
 
             <Link
-              href="/"
+              href="#about-container"
               className="hidden sm:hidden md:block lg:block hover:text-[#DF9A9A] mr-4"
             >
               About
             </Link>
             <Link
-              href="/"
+              href="#sponsor-container"
               className="hidden sm:hidden md:block lg:block hover:text-[#F1C480] mr-4"
             >
               Sponsors
             </Link>
             <Link
-              href="/"
+              href="#faq-container"
               className="mr-4 hidden sm:hidden md:block lg:block hover:text-[#9BC6E5] "
             >
               FAQ

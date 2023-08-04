@@ -4,7 +4,7 @@ import Image from "next/image";
 // ASSETS
 import arrow from "@/public/images/yellow-arrow.png";
 import sponsorGraphics from "@/public/images/sponsor-graphics.png";
-import Button from "../common/Button.component";
+// import Button from "../common/Button.component";
 
 const SponsorSection: FC = () => {
   return (

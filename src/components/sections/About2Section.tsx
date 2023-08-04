@@ -10,11 +10,11 @@ import arrow from "@/public/images/blue-arrow.png";
 const About2Section = () => {
   return (
     <div 
-      id="section-container"
+      id="about-2-container"
       className="flex w-full mx-auto px-3 lg:px-20 py-6"
     >
       <div
-        id="section-background"
+        id="about-2-background"
         className="flex flex-col md:flex-row w-full mx-auto bg-white/[0.13] rounded-3xl"
       >
         <div id="about-2-text" className="px-8 py-12 lg:p-16 md:basis-2/3">
