@@ -1,6 +1,6 @@
 import { SvgIconTypeMap } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
-import React, { FC } from 'react'
+import React, { FC, MouseEventHandler } from 'react'
 import {FcGoogle} from 'react-icons/fc'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   fontcolour?: string;
   className?: string;  // added to avoid build error. TODO - remove when HackerForm is fixed
   bgColor?: string;    // added to avoid build error. TODO - remove when HackerForm is fixed
-  onClick?: () => void; // added to avoid build error. TODO - remove when HackerForm is fixed
+  onClick?: MouseEventHandler<HTMLButtonElement>; // added to avoid build error. TODO - remove when HackerForm is fixed
 }
 const Button: FC<Props> = ({name, type, id, colour, fontcolour}) => {
 
