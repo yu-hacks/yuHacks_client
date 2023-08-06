@@ -9,8 +9,9 @@ interface Props {
   id?: string;
   colour? : string;
   fontcolour?: string;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  className?: string;
+  className?: string;  // added to avoid build error. TODO - remove when HackerForm is fixed
+  bgColor?: string;    // added to avoid build error. TODO - remove when HackerForm is fixed
+  onClick?: MouseEventHandler<HTMLButtonElement>; // added to avoid build error. TODO - remove when HackerForm is fixed
 }
 const Button: FC<Props> = ({name, type, id, colour, fontcolour}) => {
 

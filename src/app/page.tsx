@@ -4,8 +4,8 @@ import FaqSection from "@/components/sections/faqSection"
 import About2Section from "@/components/sections/About2Section";
 import SponsorSection from "@/components/sections/SponsorSection";
 import FooterSection from "@/components/sections/FooterSection";
-import { ApolloProvider } from "@apollo/client";
-import { client } from "@/utils/apolloClient";
+// import { ApolloProvider } from "@apollo/client";
+// import { client } from "@/utils/apolloClient";
 
 export default function Home() {
   
