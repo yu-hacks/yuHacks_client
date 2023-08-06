@@ -6,8 +6,8 @@ import country from "@/public/images/country.png";
 import img9 from "@/public/images/9.png";
 import img59 from "@/public/images/59.png";
 import imgdec from "@/public/images/56.3.png";
-import school from "@/public/images/School.png";
 import major from "@/public/images/major.png";
+import school1 from '@/public/images/school1.png';
 
 const AboutSection: FC = () => {
   return (
@@ -54,7 +54,7 @@ const AboutSection: FC = () => {
           </div>
           <div id="stats-schools" className="flex flex-row mb-6">
             <div className="pr-4 shrink-0">
-              <Image src={school} alt="country icon" width={40} height={40}/>
+              <Image src={school1} alt="country icon" width={40} height={40}/>
             </div>
             <div>
               <Image src={img59} alt="" />
