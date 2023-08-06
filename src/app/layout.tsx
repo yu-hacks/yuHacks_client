@@ -11,12 +11,14 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
+
   // const client = useApollo();
   return (
-    
-      <div className={`bg-[#202020]`}>
+    <html lang="en">
+      <body className={"bg-[#202020]"}>
         {children}
-      </div>
-    
+      </body>
+    </html>
   );
 }
+
