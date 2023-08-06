@@ -17,6 +17,7 @@
     "@heroicons/react": "^2.0.18",
     "@mui/icons-material": "^5.14.0",
     "@mui/material": "^5.14.1",
+    "@netlify/plugin-nextjs": "^4.39.3",
     "@next/font": "^13.4.7",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
