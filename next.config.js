@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: 'build',
-  target: 'serverless'
+  distDir: "build",
+  output: "standalone",
 };
 
 module.exports = nextConfig;
