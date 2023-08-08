@@ -15,11 +15,11 @@ const Navbar: FC = () => {
   return (
     <>
       <div className="TopSection flex flex-row mx-auto overflow-none mt-8">
-        <div className="Links lg:ml-16 md:ml-8 ml-8">
+        <div className="Links lg:ml-12 md:ml-8 ml-6">
           <ul className="mt-1 flex flex-row items-center justify-between text-neutral-400 text-base font-semibold">
             <Image
               src={Arrow}
-              className=" ml-8 sm:ml-8 lg:ml-0 mt-1 mr-4"
+              className="mr-4"
               alt="My Image"
               width={36}
               height={36}
@@ -46,7 +46,7 @@ const Navbar: FC = () => {
           </ul>
         </div>
 
-        <div className={`flex flex-row items-center justify-between mr-8 lg:mr-16 ml-auto`}>
+        <div className={`flex flex-row items-center justify-between mr-4 lg:mr-8 ml-auto`}>
           <div className={`mt-1 ${"md:block lg:block"}`}>
             <Socials isDarkMode={false} />
           </div>
