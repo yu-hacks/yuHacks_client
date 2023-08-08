@@ -41,7 +41,7 @@ const HeroSection: FC = () => {
             </span>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row lg:flex-row">
-            <span className="text-[#767676]">
+            <span className="text-[#767676] text-center">
               <span className="text-[#C95656]">Hacker</span> and{" "}
               <span className="text-[#58A0D4]">Volunteer</span> Applications
               Coming Soon...
