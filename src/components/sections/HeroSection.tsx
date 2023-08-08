@@ -27,8 +27,8 @@ const HeroSection: FC = () => {
           }}
         >
           <Image src={logoTextOnly} alt="My Image" width={214} height={44} className="my-8"/>
-          <div className="text-center text-[#EFCCCC] text-[39px] lg:text-[49px] sm:text-[39px] font-semibold leading-[54px]">
-            York University&apos;s Premiere Hackathon
+          <div className="text-center text-[#EFCCCC] drop-shadow-[0_2px_12px_rgba(201,86,86,0.4)] text-[39px] lg:text-[49px] font-bold">
+            York University&apos;s Largest Hackathon
           </div>
           <div className="mx-8 mt1 text-center  ">
             <span className="text-[#DF9A9A] text-[20px] font-semibold">

@@ -21,8 +21,8 @@ const AboutSection: FC = () => {
       >
         <div id="about-text-container" className="px-8 py-12 lg:p-16">
           <Image src={arrow} alt="" className="mb-4" />
-          <h3 className="font-semibold text-4xl text-[#EFCCCC] mb-10 max-w-[450px]">
-            Create, Connect, Code in a 36-Hour Adventure
+          <h3 className="font-semibold drop-shadow-[0_2px_12px_rgba(201,86,86,0.3)] text-4xl text-[#EFCCCC] mb-10 max-w-[450px]">
+            Create, Connect, <span className="text-[#DF9A9A]">Code</span> in a 36-Hour Adventure
           </h3>
           <p className="text-lg text-[#C3C3C3] max-w-[560px] mb-4">
             yuHacks is the largest hackathon at York University. This fall, we

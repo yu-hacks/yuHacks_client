@@ -1,7 +1,6 @@
 import Image from "next/image";
-// import ChallengeCard from "../common/ChallengeCard.component";
 
-//
+// ASSETS
 import wireframe from "@/public/images/about-2-media.png";
 import arrow from "@/public/images/blue-arrow.png";
 
@@ -17,9 +16,8 @@ const About2Section = () => {
       >
         <div id="about-2-text" className="px-8 py-12 lg:p-16 md:basis-2/3">
           <Image src={arrow} alt="" className="mb-4" />
-          {/* <MdChevronRight className='text-[#58A0D4] left-[-50px] sm:w-10 sm:h-10 xl:w-16 xl:h-16 md:w-12 md:h-12 h-9 w-9' /> */}
-          <h3 className="font-semibold text-4xl text-[#CDE2F2] mb-10 max-w-[450px]">
-            Prototype, Program, Present Your Grand Ideas
+          <h3 className="font-semibold drop-shadow-[0_2px_12px_rgba(88,160,212,0.3)] text-4xl text-[#CDE2F2] mb-10 max-w-[450px]">
+            Prototype, Program, <span className="text-[#9BC6E5]">Present</span> Your Grand Ideas
           </h3>
           <p className="text-lg text-[#C3C3C3] max-w-[560px]">
             Brainstorming an idea, making a prototype, coding for a MVP, and
