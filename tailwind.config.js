@@ -13,10 +13,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        Inconsolata: ['Inconsolata', 'serif'],
-        Arvo: ['Arvo', 'serif'],
-        ndot47: ['var(--font-ndot-47)'],
-        HindMadurai: ['Hind Madurai', 'serif'],
+        // sans: ['var(--font-jetbrains-mono)'],
       },
       width: {
         910: '910px',
